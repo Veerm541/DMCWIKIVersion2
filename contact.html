@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090c">
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/icons/favicon-180.png">
+  <meta name="description" content="Get in touch with the Devil May Cry Wiki fan project — feedback, corrections, and suggestions welcome.">
+  <title>Contact — Devil May Cry Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@700;900&family=Inter:wght@400;500;600;700&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<header class="site-header" id="siteHeader">
+  <div class="nav-shell">
+    <a class="brand" href="index.html" aria-label="Devil May Cry Wiki home">
+      <span class="brand-mark">D</span>
+      <span class="brand-copy"><span class="brand-name">Devil May Cry</span><span class="brand-tag">Stylish Archive</span></span>
+    </a>
+    <nav class="site-nav" id="siteNav" aria-label="Primary navigation"><ul class="nav-list"><li><a class="nav-link " href="index.html"><i class="fa-solid fa-house"></i>Home</a></li><li><a class="nav-link " href="characters.html"><i class="fa-solid fa-users"></i>Characters</a></li><li><a class="nav-link " href="lore.html"><i class="fa-solid fa-book-skull"></i>Game Lore</a></li><li><a class="nav-link " href="quiz.html"><i class="fa-solid fa-pizza-slice"></i>Pizza Time</a></li><li><a class="nav-link active" href="contact.html"><i class="fa-solid fa-paper-plane"></i>Contact</a></li></ul></nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch color theme"><i class="fa-solid fa-sun"></i></button>
+      <button class="menu-btn" id="menuButton" type="button" aria-label="Open menu" aria-controls="siteNav" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="page-hero-media"><img src="assets/images/Nicobg.webp" alt="Devil May Cry workshop background"></div>
+  <div class="container reveal is-visible"><div class="breadcrumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Contact</span></div><span class="eyebrow"><i class="fa-solid fa-paper-plane"></i> Send a transmission</span><h1 class="page-title">Contact the <span class="accent-text">Archive</span></h1><p>Questions, feedback, corrections, or ideas for the project? Use the validated form below.</p></div>
+</section>
+<main>
+<section class="section"><div class="container contact-layout">
+  <div class="contact-stack reveal from-left"><div class="info-tile"><div class="info-icon"><i class="fa-solid fa-envelope"></i></div><div><h3>Email</h3><p><a href="mailto:Wencytabar.DMC@gmail.com">Wencytabar.DMC@gmail.com</a></p></div></div><div class="info-tile"><div class="info-icon"><i class="fa-solid fa-location-dot"></i></div><div><h3>Archive Base</h3><p>Red Grave City — fan project setting</p></div></div><div class="info-tile"><div class="info-icon"><i class="fa-solid fa-circle-info"></i></div><div><h3>About this form</h3><p>This front-end demo validates inputs in the browser. Connect it to a backend or form service for real delivery.</p></div></div></div>
+  <form class="contact-card reveal from-right" id="contactForm" novalidate><span class="section-kicker">Message form</span><h2 style="font:600 2.7rem/.9 var(--font-display);text-transform:uppercase;margin-bottom:1rem">Send a Message</h2><div class="form-grid"><div class="form-group"><label for="name">Your name</label><input class="field" id="name" name="name" autocomplete="name" placeholder="Dante Sparda"><span class="field-error" id="nameError"></span></div><div class="form-group"><label for="email">Email</label><input class="field" id="email" name="email" type="email" autocomplete="email" placeholder="hunter@example.com"><span class="field-error" id="emailError"></span></div><div class="form-group full"><label for="subject">Subject</label><select class="field" id="subject" name="subject"><option value="">Choose a topic</option><option>Feedback</option><option>Question</option><option>Suggestion</option><option>Bug Report</option><option>Other</option></select><span class="field-error" id="subjectError"></span></div><div class="form-group full"><label for="message">Message</label><textarea class="field" id="message" name="message" placeholder="Write your message here…"></textarea><span class="field-error" id="messageError"></span></div></div><button class="btn" type="submit">Validate message <i class="fa-solid fa-paper-plane"></i></button><p class="form-status" id="contactStatus" aria-live="polite"></p></form>
+</div></section>
+<section class="section compact" id="faq"><div class="container"><div class="section-heading reveal"><span class="section-kicker">FAQ</span><h2>Quick Notes</h2></div><div class="abilities-grid reveal-stagger"><article class="ability-card"><div class="ability-icon"><i class="fa-solid fa-server"></i></div><h3>Does the form send email?</h3><p>Not yet. This version handles front-end validation only, so you can connect your preferred backend later.</p></article><article class="ability-card"><div class="ability-icon"><i class="fa-solid fa-image"></i></div><h3>Can images expand?</h3><p>Yes. Character galleries use a reusable keyboard-friendly lightbox.</p></article><article class="ability-card"><div class="ability-icon"><i class="fa-solid fa-mobile-screen"></i></div><h3>Is it responsive?</h3><p>Desktop, tablet, and mobile layouts share the same visual system and interaction patterns.</p></article><article class="ability-card"><div class="ability-icon"><i class="fa-solid fa-circle-half-stroke"></i></div><h3>Is there a light mode?</h3><p>Yes. The theme button saves the visitor's choice in local storage.</p></article></div></div></section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="index.html"><span class="brand-mark">D</span><span class="brand-copy"><span class="brand-name">Devil May Cry</span><span class="brand-tag">Stylish Archive</span></span></a>
+        <p>An unofficial fan-made wiki and school web project built to celebrate the characters, stories, and stylish identity of Devil May Cry.</p>
+        <div class="social-row" aria-label="Official Devil May Cry social links">
+          <a class="social-link" href="https://x.com/DevilMayCry" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a class="social-link" href="https://www.facebook.com/DMCPOCOFFICIAL/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="social-link" href="https://www.instagram.com/devilmaycry_5/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="social-link" href="https://www.youtube.com/devilmaycry" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-title">Explore</h3>
+        <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="characters.html">Characters</a></li><li><a href="lore.html">Game Lore</a></li><li><a href="quiz.html">Pizza Time Quiz</a></li></ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Info</h3>
+        <ul class="footer-links"><li><a href="contact.html">Contact</a></li><li><a href="contact.html#faq">FAQ</a></li><li><a href="https://www.devilmaycry.com/5se/us/" target="_blank" rel="noopener">Official DMC Site</a></li></ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Devil Hunter Dispatch</h3>
+        <p style="color:var(--muted);font-size:.82rem;margin-bottom:.7rem">Demo newsletter form with local front-end validation.</p>
+        <div><form class="newsletter newsletter-form" novalidate><input class="field" type="email" aria-label="Newsletter email" placeholder="hunter@example.com" required><button class="btn" type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button></form><p class="newsletter-status" aria-live="polite"></p></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© <span data-current-year></span> Devil May Cry Wiki — fan project.</span><span>Devil May Cry and related properties belong to their respective rights holders.</span></div>
+  </div>
+</footer>
+<button class="back-top" id="backTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image preview"><div class="lightbox-inner"><button class="lightbox-close" id="lightboxClose" aria-label="Close image preview"><i class="fa-solid fa-xmark"></i></button><img id="lightboxImage" alt=""><p class="lightbox-caption" id="lightboxCaption"></p></div></div>
+<div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/contact.js" defer></script>
+</body>
+</html>

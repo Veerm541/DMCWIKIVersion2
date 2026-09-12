@@ -1,0 +1,903 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Dante",
+      "role": "Demon Hunter",
+      "weapons": [
+        "Rebellion",
+        "Ebony & Ivory",
+        "Devil Sword Dante"
+      ],
+      "popularity": 98,
+      "image": "assets/images/DanteDMC5.webp",
+      "thumbnail": "assets/images/thumbs/characters/dante.webp",
+      "description": "The carefree, wise-cracking son of Sparda.",
+      "lore": {
+        "full": "<p>Born to the legendary dark knight Sparda and the kind-hearted human Eva, Dante was fated for greatness, though tragedy struck early in his life. His peaceful childhood was shattered when his mother was ruthlessly killed by demons, an event that also led to the mysterious disappearance of his twin brother, Vergil. Left to fend for himself, Dante developed a hardened exterior, masking his pain with arrogance, sarcasm, and an undying thirst for vengeance against the creatures that tore his family apart.</p>\n\n<p>Determined to carve out his own destiny, Dante took up the mantle of a demon hunter, establishing the now-iconic <strong>Devil May Cry</strong> business—though financial responsibility has never been his strong suit. Jobs came and went, some paying well, others leaving him completely broke, but Dante never lost sight of his true mission: safeguarding humanity from demonic threats. Whether tracking down supernatural disturbances, accepting mercenary contracts, or simply stumbling into chaos, he never backed down from a fight—even if it meant wrecking his own shop in the process.</p>\n\n<p>Throughout his journey, Dante has encountered an endless rogue’s gallery of monstrous adversaries, many of whom sought to enslave humanity or reshape the world in their twisted image. He battled and defeated the demonic ruler <strong>Mundus</strong>, avenging his mother’s death and reaffirming his position as the greatest demon slayer of his generation. He confronted <strong>Argosax the Chaos</strong>, thwarting yet another attempt to plunge the world into eternal suffering. Even when facing <strong>Urizen</strong>, a being of unimaginable strength and the dark half of his own twin brother, Dante refused to falter—proving once again that power alone is meaningless without the heart and will to wield it wisely.</p>\n\n<p>But Dante is more than just a warrior. He is the embodiment of raw style, fighting with an unmatched blend of grace, speed, and brutality, turning battles into performances worthy of standing ovations. Whether he’s flipping through the air, firing off <strong>Ebony & Ivory's</strong> explosive rounds, or swinging his <strong>Rebellion</strong> with effortless precision, Dante treats every encounter like a game—one that only he can win. His <strong>Devil Trigger</strong> unlocks the full extent of his demonic lineage, amplifying his already overwhelming power, while his varied combat styles—from <strong>Trickster’s</strong> agility to <strong>Royal Guard’s</strong> masterful defense—give him an edge that no enemy can predict.</p>\n\n<p>And yet, beneath the cocky smirk and sharp one-liners, Dante harbors deep scars from his past, wounds that no amount of demon-hunting can truly heal. Despite losing his family, he has found companionship in trusted allies such as <strong>Lady, Trish, and even finding his niece, Nero</strong>, forming bonds that remind him that even in a life filled with bloodshed, loyalty and friendship still matter.</p>\n\n<p>With every passing challenge, Dante continues to defy fate, wielding the power of <strong>Sparda</strong> while forging a legacy entirely his own. Whether standing alone against impossible odds or teaming up with unlikely allies, Dante remains the ultimate demon hunter, forever chasing the next challenge—and looking damn good doing it.</p>\n\n<p>Because when the devil cries, Dante laughs in his face.</p>",
+        "abilities": [
+          {
+            "name": "Trickster Style",
+            "description": "Focuses on mobility, allowing Dante to perform rapid dashes and teleports.",
+            "icon": "fas fa-running"
+          },
+          {
+            "name": "Devil Trigger",
+            "description": "Transforms Dante into a demonic form, enhancing all abilities.",
+            "icon": "fas fa-fire"
+          },
+          {
+            "name": "Royal Guard",
+            "description": "Absorbs enemy attacks to unleash powerful counters.",
+            "icon": "fas fa-shield-alt"
+          },
+          {
+            "name": "Million Stab",
+            "description": "Rapidly thrusts his sword multiple times for extreme damage.",
+            "icon": "fas fa-cut"
+          }
+        ],
+        "stats": {
+          "power": 98,
+          "speed": 95,
+          "intelligence": 85,
+          "endurance": 90
+        },
+        "gallery": [
+          {
+            "image": "assets/images/Dantegallery1.webp",
+            "caption": "Dante in Devil May Cry 5"
+          },
+          {
+            "image": "assets/images/youngdante.webp",
+            "caption": "Young Dante from DMC3"
+          },
+          {
+            "image": "assets/images/dantejackson.webp",
+            "caption": "Dante Jackson"
+          }
+        ],
+        "quotes": [
+          "I should have been the one to fill your dark soul with light!",
+          "Jackpot!",
+          "This party's getting crazy! Let's rock!"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Vergil",
+      "role": "Demon Swordmaster",
+      "weapons": [
+        "Yamato",
+        "Beowulf",
+        "Force Edge"
+      ],
+      "popularity": 98,
+      "image": "assets/images/Vergil_DMC5.webp",
+      "thumbnail": "assets/images/thumbs/characters/vergil.webp",
+      "description": "Dante's stoic twin brother obsessed with power.",
+      "lore": {
+        "full": "<p>Vergil is Dante’s twin brother—equal in potential, yet profoundly different in philosophy and path. Born to the legendary demon knight Sparda and the kind human Eva, Vergil inherited the same extraordinary bloodline as Dante, but processed their shared trauma in a drastically different way. When their mother was murdered in a brutal demon attack and Vergil was separated from his brother, he was left vulnerable, alone, and consumed by a single, unwavering belief: that only through power could he protect what mattered and never be left helpless again.</p>\n\n<p>This obsession with strength became the core of Vergil’s identity. Whereas Dante embraced his humanity and the bonds that came with it, Vergil rejected vulnerability, emotion, and attachment—seeking instead to claim the full extent of his demonic heritage. His pursuit of absolute power led him down a dark and solitary road, filled with ruthless ambition and a growing disregard for anything that resembled weakness or sentimentality.</p>\n\n<p>Wielding the <strong>Yamato</strong>, a legendary katana once belonging to his father, Vergil possessed the ability to cut through space and dimensions themselves—a reflection of both his refined combat style and his desire to sever himself from human emotion. His cold, calculating demeanor masked a storm of inner conflict, as he continually sought to cast off his humanity in the belief that it held him back. This struggle culminated in a radical act of self-division: Vergil used Yamato to split himself in two, creating <strong>Urizen</strong>, the embodiment of his pure demonic will, and <strong>V</strong>, the fragment that retained his suppressed humanity and poetic soul.</p>\n\n<p>This internal war played out on a grand scale. As Urizen attempted to dominate the world through raw, unrelenting power, V sought help from Dante and Nero to bring about his other half’s downfall. Only through their combined efforts—and V’s final sacrifice—was Vergil reborn as a whole being, regaining both his immense strength and the conscience he had tried so hard to bury. This transformation marked a turning point in Vergil’s journey, forcing him to confront the consequences of his actions, his fractured identity, and the family he had long cast aside.</p>\n\n<p>Though his heart remained guarded, Vergil began to shift. His longstanding rivalry with Dante evolved from violent clashes to a reluctant, hard-earned mutual respect. He acknowledged Nero as his son—though not in so many words—planting the seeds for a tentative reconciliation that neither of them had imagined possible. Still a stoic and proud warrior, Vergil chose to stand alongside his brother and son when the world faced threats beyond even his comprehension.</p>\n\n<p>Vergil remains a figure of discipline, silence, and deadly precision. Every swing of Yamato is deliberate, every move an expression of control honed through years of isolation and hardship. But beneath the armor of power and pride lies a man shaped by grief, loss, and the desperate hope that strength could somehow bring peace. Now, with his past laid bare and his identity reclaimed, Vergil walks a new path—not one of redemption, but of resolve. No longer chasing power for its own sake, he seeks understanding of the balance between strength and compassion, between demon and human.</p>\n\n<p>In the end, Vergil’s legacy is one of transformation—a journey from isolation to uneasy brotherhood, from fragmented soul to fearsome unity. And though his battles may never truly end, he now fights not just for power, but with purpose.</p>",
+        "abilities": [
+          {
+            "name": "Judgment Cut",
+            "description": "Delivers incredibly fast slashes that seem to cut space itself.",
+            "icon": "fas fa-cut"
+          },
+          {
+            "name": "Doppelganger",
+            "description": "Creates a shadow clone that mimics his movements.",
+            "icon": "fas fa-clone"
+          },
+          {
+            "name": "Summoned Swords",
+            "description": "Materializes spectral blades that hover around and attack enemies.",
+            "icon": "fas fa-magic"
+          },
+          {
+            "name": "Rapid Slash",
+            "description": "Dashes forward at high speed, cutting through all enemies in his path.",
+            "icon": "fas fa-bolt"
+          }
+        ],
+        "stats": {
+          "power": 97,
+          "speed": 97,
+          "intelligence": 90,
+          "endurance": 88
+        },
+        "gallery": [
+          {
+            "image": "assets/images/vergilgallery.webp",
+            "caption": "Vergil in DMC5"
+          },
+          {
+            "image": "assets/images/vergilgallery2.webp",
+            "caption": "Young Vergil in DMC3"
+          },
+          {
+            "image": "assets/images/vergilart.webp",
+            "caption": "Vergil Art"
+          }
+        ],
+        "quotes": [
+          "Power... Give me more power!",
+          "Foolishness, Dante. Foolishness.",
+          "I am the storm that is approaching."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "V",
+      "role": "Mystic Summoner",
+      "weapons": [
+        "Cane",
+        "Griffon",
+        "Shadow",
+        "Nightmare"
+      ],
+      "popularity": 85,
+      "image": "assets/images/V.webp",
+      "thumbnail": "assets/images/thumbs/characters/v.webp",
+      "description": "Mysterious poet who commands familiars in battle.",
+      "lore": {
+        "full": "<p>V is a mysterious, enigmatic figure cloaked in dark elegance and poetic melancholy. Unlike traditional warriors, V does not engage in direct combat. Instead, he relies on summoned familiars—magical extensions of his will—to fight on his behalf. This unconventional fighting style reflects his fragile physical form, which belies the immense depth and turmoil hidden within. Every word he speaks is laced with literary flair, quoting poetry as if trying to give meaning to the chaos surrounding him.</p>\n\n<p>V is not a separate entity born from chance; he is the human fragment of <strong>Vergil</strong>—the part that was discarded when Vergil used the power of <strong>Yamato</strong> to split his soul in two. While Urizen became the embodiment of Vergil’s ruthless demonic ambition, V inherited his lost humanity: the pain, the guilt, the reflection. Haunted by fragmented memories and fading strength, V embarked on a desperate journey to stop Urizen, seeking help from Dante and Nero to do what he alone could not—confront his other half and bring balance to a broken soul.</p>\n\n<p>Though physically frail, V commands three powerful familiars, each representing a different facet of his past: <strong>Griffon</strong>, a sarcastic talking bird who manipulates lightning and air; <strong>Shadow</strong>, a panther-like beast that strikes from the ground with brutal force; and <strong>Nightmare</strong>, a towering demon of raw destruction that descends like a meteor upon V’s enemies. These creatures act as both weapons and guardians, fiercely loyal to V, yet extensions of Vergil’s power and psyche.</p>\n\n<p>Throughout his journey, V wrestles not only with the danger posed by Urizen but with the fading strength of his borrowed time. His body, unstable by nature, begins to deteriorate as his human essence alone cannot sustain itself indefinitely. Despite this, he pushes forward—driven by a sense of purpose, the desire to right past wrongs, and a deep longing to become whole again. V’s character arc is one of introspection, vulnerability, and tragic beauty, standing in stark contrast to the overwhelming might of his counterparts.</p>\n\n<p>When the moment finally comes, V merges back with Urizen, reuniting the fractured soul of Vergil. Yet the mark he leaves behind is unmistakable. In his brief existence, V displayed a side of Vergil that had long been buried: compassion, remorse, and the poetic soul of a man who once loved and lost. He was not simply a tool for restoration, but a voice for the humanity Vergil tried to destroy—and perhaps, the reason he ultimately chose to embrace it once more.</p>\n\n<p>Though V’s time was fleeting, his presence was profound. He showed that strength isn’t always found in the blade or brute force, but in the quiet resilience of the heart, the pursuit of truth, and the courage to confront one's own darkness.</p>",
+        "abilities": [
+          {
+            "name": "Griffon",
+            "description": "A bird-like familiar that controls wind and lightning.",
+            "icon": "fas fa-feather"
+          },
+          {
+            "name": "Shadow",
+            "description": "A panther-like familiar that attacks enemies with agility.",
+            "icon": "fas fa-cat"
+          },
+          {
+            "name": "Nightmare",
+            "description": "A giant golem that crushes enemies with heavy blows.",
+            "icon": "fas fa-dumbbell"
+          }
+        ],
+        "stats": {
+          "power": 75,
+          "speed": 80,
+          "intelligence": 95,
+          "endurance": 70
+        },
+        "gallery": [
+          {
+            "image": "assets/images/Vgallery.webp",
+            "caption": "V with his familiars."
+          },
+          {
+            "image": "assets/images/Vwhitehair.webp",
+            "caption": "V's devil trigger"
+          }
+        ],
+        "quotes": [
+          "The darkness holds many secrets.",
+          "My familiars will do the fighting for me.",
+          "I am but a fragment, waiting to be whole."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Nero",
+      "role": "Devil Hunter",
+      "weapons": [
+        "Red Queen",
+        "Blue Rose",
+        "Devil Breakers"
+      ],
+      "popularity": 92,
+      "image": "assets/images/Nero_DMC5.webp",
+      "thumbnail": "assets/images/thumbs/characters/nero.webp",
+      "description": "A brash young hunter with a devil arm and great potential.",
+      "lore": {
+        "full": "<p>Nero is a passionate and headstrong young Devil Hunter, driven by an unshakable sense of justice and a fierce desire to protect those he loves. First introduced as a brash newcomer to the demon-hunting world, Nero quickly proved that he was more than just a hotheaded rookie—he was a force to be reckoned with. Armed with his signature weapons—the powerful <strong>Red Queen</strong>, a sword enhanced with combustion capabilities, and the custom-built revolver <strong>Blue Rose</strong>—Nero brings his own explosive and stylish flair to every battle.</p>\n\n<p>Originally a member of the Order of the Sword, Nero's life was upended when he discovered not only the dark secrets of the Order but also his own latent demonic abilities. His right arm, once infused with demonic power, was violently severed by a mysterious figure—later revealed to be his father, <strong>Vergil</strong>. In its place, Nero now wields a series of high-tech prosthetic limbs called <strong>Devil Breakers</strong>, expertly crafted by his eccentric engineer and partner, <strong>Nico</strong>. Each Devil Breaker offers a unique combat function—from explosive punches to time-slowing abilities—allowing Nero to adapt to any threat with versatility and flair.</p>\n\n<p>Though Nero’s temper and sharp tongue often get the better of him, his heart remains in the right place. He fights not for glory or power, but to defend those who cannot defend themselves. His bond with allies like Nico, his girlfriend Kyrie, and eventually even Dante grows stronger as he matures—not just as a fighter, but as a person. Beneath the bravado lies a deep vulnerability and a need to understand his place in a world that seems constantly shrouded in secrets.</p>\n\n<p>The revelation that he is the son of Vergil shook Nero to his core, challenging everything he thought he knew about himself. Yet rather than succumb to fear or anger, Nero embraced his lineage, even as he vowed to forge a different path from his father. He unlocked his true power during a climactic moment, manifesting a new demonic arm—his <strong>Devil Trigger</strong>—symbolizing his complete acceptance of who he is: not just a hunter, not just a son, but someone entirely new.</p>\n\n<p>Now standing between two legendary brothers, Nero represents the next generation of Devil Hunters—a bridge between humanity and demonkind, between past mistakes and future hope. While he still has much to learn, Nero’s courage, determination, and defiant spirit mark him as a hero in his own right. With every challenge, he grows stronger—not just in power, but in purpose.</p>\n\n<p>With Red Queen ignited, Blue Rose loaded, and a Devil Breaker armed, Nero charges headfirst into battle—not because he has to, but because it’s the right thing to do. And nothing will stop him from carving out his own legacy.</p>",
+        "abilities": [
+          {
+            "name": "Devil Breakers",
+            "description": "Mechanical arms with various combat abilities.",
+            "icon": "fas fa-robot"
+          },
+          {
+            "name": "Red Queen Boost",
+            "description": "A motorcycle-like boost system for his sword, enhancing attacks.",
+            "icon": "fas fa-bolt"
+          },
+          {
+            "name": "Blue Rose Shots",
+            "description": "Powerful revolver shots with explosive effects.",
+            "icon": "fas fa-gun"
+          },
+          {
+            "name": "Showdown",
+            "description": "Unleashes a devastating series of sword slashes, culminating in a powerful final blow.",
+            "icon": "fas fa-cut"
+          }
+        ],
+        "stats": {
+          "power": 85,
+          "speed": 88,
+          "intelligence": 80,
+          "endurance": 82
+        },
+        "gallery": [
+          {
+            "image": "assets/images/nerodevilbringer.webp",
+            "caption": "Nero before he lost his devil arm"
+          },
+          {
+            "image": "assets/images/neroafter.webp",
+            "caption": "Nero using a Devil Breaker"
+          },
+          {
+            "image": "assets/images/nerostopping.jpg",
+            "caption": "Nero stopping he's uncle and his dad"
+          }
+        ],
+        "quotes": [
+          "I’m gonna take you down!",
+          "You don’t know who you’re messing with!",
+          "This is my fight!"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "Lady",
+      "role": "Human Devil Hunter",
+      "weapons": [
+        "Kalina Ann",
+        "Rocket Launcher",
+        "Handguns"
+      ],
+      "popularity": 86,
+      "image": "assets/images/DMC5_Lady.webp",
+      "thumbnail": "assets/images/thumbs/characters/lady.webp",
+      "description": "A skilled human devil hunter driven by revenge.",
+      "lore": {
+        "full": "<p>Lady, born Mary Ann Arkham, is a formidable human demon hunter whose unwavering determination and exceptional combat skills have earned her a respected place among her supernatural peers. Her journey into the world of demon hunting was forged in tragedy: her father, Arkham, a once-human scholar obsessed with demonic power, murdered her mother, Kalina Ann, in a ritualistic attempt to gain such power. This act of betrayal shattered Mary's world, leading her to renounce her given name and adopt the moniker 'Lady,' symbolizing her break from the past and her resolve to forge her own destiny.</p>\n\n<p>Despite lacking any demonic heritage or supernatural abilities, Lady has proven herself a relentless and resourceful combatant. She is highly skilled in acrobatics and armed close-quarters combat, wielding an extensive arsenal of firearms with deadly precision. Her signature weapon, the <strong>Kalina Ann</strong>—a customized missile launcher named in honor of her mother—serves as both a tribute and a testament to her lethal proficiency in battle. Lady's expertise extends beyond weaponry; her deep knowledge of demon lore and tactical acumen make her an invaluable ally in the fight against demonic threats.</p>\n\n<p>Lady's path first intersected with Dante's during the events surrounding the rise of the Temen-ni-gru tower, where she sought to confront and eliminate her father. Initially at odds, Lady and Dante's relationship evolved from adversaries to allies, bonded by shared goals and mutual respect. It was Lady who inadvertently inspired the name of Dante's demon-hunting business, <strong>Devil May Cry</strong>, during a moment of shared reflection on loss and resilience.</p>\n\n<p>Throughout the series, Lady has continued to play a crucial role in combating demonic forces. In <strong>Devil May Cry 4: Special Edition</strong>, she becomes a playable character, showcasing her unique combat style centered around firearms and agility. In <strong>Devil May Cry 5</strong>, she is captured and used as a vessel for the demon Artemis but is later rescued by Nero, reaffirming her enduring presence and importance within the narrative.</p>\n\n<p>Lady's character embodies the strength and determination of humanity in the face of overwhelming supernatural odds. Her evolution from a vengeance-driven lone hunter to a trusted member of Dante's inner circle highlights her resilience and capacity for growth. With each battle, Lady continues to demonstrate that true power lies not in demonic heritage but in unwavering resolve and the courage to confront one's demons—both literal and figurative.</p>",
+        "abilities": [
+          {
+            "name": "Kalina Ann",
+            "description": "A powerful rocket launcher weapon with explosive firepower.",
+            "icon": "fas fa-bomb"
+          },
+          {
+            "name": "Precision Shooting",
+            "description": "Expert markswoman with handguns and rifles.",
+            "icon": "fas fa-crosshairs"
+          },
+          {
+            "name": "Explosives Expert",
+            "description": "Uses grenades and other explosives with deadly accuracy.",
+            "icon": "fas fa-firecracker"
+          }
+        ],
+        "stats": {
+          "power": 70,
+          "speed": 78,
+          "intelligence": 83,
+          "endurance": 75
+        },
+        "gallery": [
+          {
+            "image": "assets/images/ladygallery.webp",
+            "caption": "Lady just being lady."
+          },
+          {
+            "image": "assets/images/ladygallery2.webp",
+            "caption": "Lady with her kali ann"
+          },
+          {
+            "image": "assets/images/ladypizz.webp",
+            "caption": "Lady with pizza"
+          }
+        ],
+        "quotes": [
+          "I’m doing this for my own reasons.",
+          "Demons won’t get the best of me.",
+          "No one’s gonna stop me."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Trish",
+      "role": "Demon Lady",
+      "weapons": [
+        "Sparda's Sword",
+        "Lightning",
+        "Dual Pistols"
+      ],
+      "popularity": 85,
+      "image": "assets/images/DMC5_Trish.webp",
+      "thumbnail": "assets/images/thumbs/characters/trish.webp",
+      "description": "A demon who looks like Dante’s mother, with lightning powers.",
+      "lore": {
+        "full": "<p>Trish is a powerful demon created by the dark emperor <strong>Mundus</strong> in the exact likeness of Dante’s late mother, <strong>Eva</strong>. Designed to exploit Dante's lingering grief and lure him into a deadly trap on Mallet Island, Trish initially served as a cunning agent of deception. However, her encounter with Dante would change the course of her existence. When Dante chose to save her life despite her betrayal, Trish experienced a profound awakening—one that led her to turn against her creator and stand beside the very man she was meant to destroy.</p>\n\n<p>Though born of darkness, Trish quickly proved herself to be more than a mere puppet. She possesses a formidable array of supernatural abilities, including superhuman strength, agility, and accelerated healing. Her command over <strong>lightning-based powers</strong> allows her to unleash devastating energy attacks, electrifying the battlefield with both grace and ferocity. Trish wields twin customized pistols, <strong>Luce and Ombra</strong>, which once belonged to Sparda, Dante's father. These weapons, combined with her unarmed combat prowess, make her a versatile and deadly combatant.</p>\n\n<p>After aiding Dante in defeating Mundus, Trish became his trusted partner, joining him in his demon-hunting endeavors at the <strong>Devil May Cry</strong> agency. Her loyalty and effectiveness in battle solidified her place as an invaluable ally. In <strong>Devil May Cry 4</strong>, Trish adopted the alias <strong>Gloria</strong> to infiltrate the Order of the Sword, showcasing her skills in espionage and subterfuge. Her striking appearance and combat abilities made her a standout figure, even among the most seasoned warriors.</p>\n\n<p>Trish's journey is one of redemption and self-discovery. Initially created for manipulation, she chose to forge her own path, embracing her autonomy and fighting for the protection of humanity. Her complex relationship with Dante is marked by mutual respect and camaraderie, with hints of deeper emotional undercurrents. Trish's presence adds a layer of sophistication and strength to the Devil May Cry universe, embodying the potential for change and the power of choice.</p>\n\n<p>Throughout the series, Trish has appeared in multiple titles, including <strong>Devil May Cry 2</strong> and <strong>Devil May Cry 5</strong>, as well as various crossover games. Her evolution from a deceptive creation to a heroic figure underscores the series' themes of identity, free will, and the enduring struggle between light and darkness. With her electrifying abilities and unwavering resolve, Trish continues to captivate fans and stand as a testament to the strength found in redemption.</p>",
+        "abilities": [
+          {
+            "name": "Lightning Strike",
+            "description": "Harnesses lightning to stun and damage enemies.",
+            "icon": "fas fa-bolt"
+          },
+          {
+            "name": "Dual Pistols",
+            "description": "Expert markswoman with twin pistols.",
+            "icon": "fas fa-gun"
+          },
+          {
+            "name": "Swordsmanship",
+            "description": "Skilled with a sword in close combat.",
+            "icon": "fas fa-cut"
+          }
+        ],
+        "stats": {
+          "power": 80,
+          "speed": 82,
+          "intelligence": 88,
+          "endurance": 79
+        },
+        "gallery": [
+          {
+            "image": "assets/images/trishgallery.webp",
+            "caption": "Trish wielding Sparda's sword"
+          },
+          {
+            "image": "assets/images/trishsmile.webp",
+            "caption": "Trish going to Urizen's tree"
+          },
+          {
+            "image": "assets/images/trishdmc4.webp",
+            "caption": "Trish in DMC4"
+          }
+        ],
+        "quotes": [
+          "You’re not the only one who fights for family.",
+          "Let’s finish this, Dante.",
+          "I’m more than just a demon."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name": "Nico",
+      "role": "Weapons Engineer",
+      "weapons": [
+        "Blue Rose",
+        "Custom Devil Arms"
+      ],
+      "popularity": 91,
+      "image": "assets/images/Nicoletta_Goldstein_DMC5.webp",
+      "thumbnail": "assets/images/thumbs/characters/nico.webp",
+      "description": "Brilliant mechanic and Nero’s trusted partner.",
+      "lore": {
+        "full": "<p><strong>Nicoletta 'Nico' Goldstein</strong> is a brilliant and eccentric weapons artisan who plays a pivotal role in the events of <em>Devil May Cry 5</em>. As the daughter of the infamous alchemist <strong>Agnus</strong> and the granddaughter of the legendary gunsmith <strong>Nell Goldstein</strong>—the creator of Dante's iconic pistols, Ebony and Ivory—Nico inherits a complex legacy of genius, ambition, and moral ambiguity. Despite her father's dark past, Nico has carved out her own identity, channeling her prodigious talents into crafting innovative weaponry to aid in the battle against demonic forces.</p>\n\n<p>Nico's partnership with <strong>Nero</strong> is both professional and deeply personal. After Nero loses his demonic arm, the Devil Bringer, Nico steps in to design and construct the <strong>Devil Breakers</strong>: a series of customizable prosthetic arms, each imbued with unique abilities tailored to Nero's combat style. These mechanical marvels not only restore Nero's fighting capabilities but also enhance them, allowing for new strategies and techniques in the field. Nico's workshop, a mobile van emblazoned with neon 'Devil May Cry' signage, serves as both a laboratory and a sanctuary, reflecting her unorthodox approach to both engineering and life.</p>\n\n<p>Personality-wise, Nico is unapologetically brash, witty, and fiercely independent. Her sharp tongue and irreverent humor often mask a deep-seated commitment to her friends and her craft. She refers to herself as the 'artisan of arms,' a title that underscores her view of weapon-making as both a science and an art form. Nico's sassy demeanor and distinctive style—complete with tattoos, red-rimmed glasses, and a perpetual cigarette—make her a standout character in the Devil May Cry universe.</p>\n\n<p>Beyond her technical prowess, Nico's character adds a fresh dynamic to the series. Her interactions with Nero reveal a layered relationship built on mutual respect, camaraderie, and a shared sense of purpose. While she often teases and challenges him, it's clear that her support is unwavering. Nico's presence brings a human touch to the supernatural battles, grounding the narrative in themes of redemption, legacy, and the enduring power of human ingenuity.</p>\n\n<p>In a world overrun by demons and dark legacies, Nico stands out as a beacon of innovation and resilience. Her contributions are not just in the weapons she crafts but in the spirit she brings to the fight—a reminder that even amidst chaos, creativity and determination can forge paths to victory.</p>",
+        "abilities": [
+          {
+            "name": "Weapons Crafting",
+            "description": "Creates custom Devil Arms to enhance combat capabilities.",
+            "icon": "fas fa-wrench"
+          },
+          {
+            "name": "Devil Breaker Engineering",
+            "description": "Invented and modifies Nero’s prosthetic arm.",
+            "icon": "fas fa-tools"
+          }
+        ],
+        "stats": {
+          "power": 50,
+          "speed": 70,
+          "intelligence": 95,
+          "endurance": 65
+        },
+        "gallery": [
+          {
+            "image": "assets/images/nicoworkshop.webp",
+            "caption": "Nico on her workshop van"
+          },
+          {
+            "image": "assets/images/nicoanddante.jpg",
+            "caption": "Nico gifting her made weapon to her Idol"
+          },
+          {
+            "image": "assets/images/nicooutsidevan.webp",
+            "caption": "Nico with her van outside"
+          }
+        ],
+        "quotes": [
+          "Genius at work, don't disturb!",
+          "Need a weapon? I got you covered.",
+          "Nero, try not to break this one, alright?"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "Mundus",
+      "role": "Prince of Darkness",
+      "weapons": [
+        "Dark Magic",
+        "Demonic Beams"
+      ],
+      "popularity": 70,
+      "image": "assets/images/Mundus.webp",
+      "thumbnail": "assets/images/thumbs/characters/mundus.webp",
+      "description": "The ruler of the demon world and ultimate foe of Sparda’s bloodline.",
+      "lore": {
+        "full": "<p><strong>Mundus</strong>, known as the <em>Prince of Darkness</em>, stands as the overarching antagonist of the <strong>Devil May Cry</strong> franchise. As the tyrannical ruler of the Demon World, Mundus commands immense dark power and harbors an unrelenting desire to dominate all realms. His deep-seated hatred for <strong>Sparda</strong>—the legendary Dark Knight who once served him but ultimately rebelled—fuels his relentless war against humanity and Sparda's lineage.</p>\n\n<p>Two millennia ago, Mundus led a brutal campaign to conquer the human world, only to be thwarted by Sparda, who sealed him away in a vault on Mallet Island. Despite this defeat, Mundus's influence persisted, casting a long shadow over the realms. He manipulates reality, unleashes destructive energy, and commands hordes of demons to execute his will. His capacity to create powerful entities, such as <strong>Trish</strong>—a demon crafted in the likeness of Dante's mother, Eva—demonstrates his cunning and strategic prowess.</p>\n\n<p>In the original <strong>Devil May Cry</strong>, Mundus orchestrates his return by opening a Hell Gate on Mallet Island, using Trish to lure Dante into a trap. However, Dante's resilience and awakening of his true power enable him to confront and ultimately defeat Mundus, banishing him back to the Demon World. Despite this victory, Mundus's ominous vow to return underscores his enduring threat to both the human and demon realms.</p>\n\n<p>Mundus's legacy is marked by his oppressive rule, manipulation, and the corruption of once-loyal subjects. His creation of the Angelo demons, including the transformation of Vergil into <strong>Nelo Angelo</strong>, exemplifies his ruthless methods to maintain control and exact revenge. Even in defeat, Mundus's presence lingers, a testament to his formidable power and the perpetual struggle between light and darkness within the <strong>Devil May Cry</strong> universe.</p>",
+        "abilities": [
+          {
+            "name": "Reality Manipulation",
+            "description": "Can shape dimensions and project illusions.",
+            "icon": "fas fa-eye"
+          },
+          {
+            "name": "Demonic Beams",
+            "description": "Fires devastating energy blasts.",
+            "icon": "fas fa-bolt"
+          },
+          {
+            "name": "Immortality",
+            "description": "Exists beyond the constraints of time, rendering him ageless.",
+            "icon": "fas fa-infinity"
+          },
+          {
+            "name": "Mind Control",
+            "description": "Influences and dominates the wills of weaker beings.",
+            "icon": "fas fa-brain"
+          }
+        ],
+        "stats": {
+          "power": 95,
+          "speed": 60,
+          "intelligence": 85,
+          "endurance": 90
+        },
+        "gallery": [
+          {
+            "image": "assets/images/mundusgallery.webp",
+            "caption": "Mundus with dante"
+          },
+          {
+            "image": "assets/images/Eyes_of_Mundus.webp",
+            "caption": "Three eyes of Mundus"
+          },
+          {
+            "image": "assets/images/mundustrueform.webp",
+            "caption": "The true form of Mundus"
+          },
+          {
+            "image": "assets/images/Mundus.webp",
+            "caption": "The prince on his throne."
+          }
+        ],
+        "quotes": [
+          "Bow before your true king.",
+          "Sparda’s betrayal will not be forgiven.",
+          "You are but an insect before my power!"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "Urizen",
+      "role": "Demonic Tyrant",
+      "weapons": [
+        "Dark Thorns",
+        "World Tree Power"
+      ],
+      "popularity": 75,
+      "image": "assets/images/Urizen.webp",
+      "thumbnail": "assets/images/thumbs/characters/urizen.webp",
+      "description": "The monstrous half of Vergil seeking absolute domination.",
+      "lore": {
+        "full": "<p><strong>Urizen</strong> is the demonic half of <strong>Vergil</strong>, the twin brother of <strong>Dante</strong>, and the primary antagonist of <em>Devil May Cry 5</em>. Born from Vergil's desperate attempt to rid himself of his humanity, Urizen embodies the darkest aspects of Vergil's soul—his insatiable thirst for power, his cold detachment, and his ruthless ambition. Unlike Vergil, who sought strength to protect, Urizen seeks power for its own sake, viewing humanity's emotions and weaknesses as impediments to true strength.</p>\n\n<p>Upon severing his human side, Vergil's demonic essence coalesced into Urizen, a towering and formidable entity. Initially bound to his throne within the Qliphoth, a massive demonic tree, Urizen began cultivating the tree by harvesting human blood, aiming to bear a fruit that would grant him unparalleled power. This fruit, once consumed, would elevate him to a god-like status, solidifying his dominion over both the human and demon worlds.</p>\n\n<p>Urizen's power is immense and multifaceted. He wields devastating energy blasts, summons destructive roots and tendrils, and can manipulate time and space to his advantage. His formidable barrier, created from the Yamato, renders him nearly invulnerable. Even seasoned demon hunters like Dante and Nero struggled to contend with his might. However, his arrogance and underestimation of his opponents proved to be his downfall.</p>\n\n<p>Despite his overwhelming strength, Urizen's inability to comprehend the value of human emotions and connections led to his eventual defeat. In a final confrontation, Urizen consumed the Qliphoth fruit, shedding his rooted armor and revealing his true form. Yet, even with this newfound power, he was ultimately bested by Dante, who had unlocked his Sin Devil Trigger form. In his final moments, Urizen merged with V, Vergil's human half, to become whole once more, acknowledging the necessity of both strength and humanity.</p>\n\n<p>Urizen's existence serves as a poignant exploration of the consequences of forsaking one's humanity in the pursuit of power. His story is a tragic reflection of Vergil's internal conflict and the eternal struggle between light and darkness.</p>",
+        "abilities": [
+          {
+            "name": "Qliphoth Growth",
+            "description": "Controls a demonic tree that devours souls.",
+            "icon": "fas fa-tree"
+          },
+          {
+            "name": "Dark Thorn Barrage",
+            "description": "Launches razor-sharp demonic thorns at enemies.",
+            "icon": "fas fa-spider"
+          },
+          {
+            "name": "Reality Manipulation",
+            "description": "Can distort space and time to trap or disorient foes.",
+            "icon": "fas fa-cogs"
+          },
+          {
+            "name": "Dimensional Rift",
+            "description": "Opens portals to other realms, altering the battlefield.",
+            "icon": "fas fa-door-open"
+          }
+        ],
+        "stats": {
+          "power": 98,
+          "speed": 55,
+          "intelligence": 80,
+          "endurance": 95
+        },
+        "gallery": [
+          {
+            "image": "assets/images/urizencontrol.webp",
+            "caption": "Urizen controlling the Qliphoth"
+          },
+          {
+            "image": "assets/images/urizenthrone.webp",
+            "caption": "Urizen in his throne"
+          },
+          {
+            "image": "assets/images/urizenabsorb.webp",
+            "caption": "Urizen after absorbing the Qlipoth fruit"
+          }
+        ],
+        "quotes": [
+          "Strength is absolute.",
+          "The weak shall perish beneath my rule.",
+          "You are nothing before me."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "name": "Sparda",
+      "role": "Legendary Dark Knight",
+      "weapons": [
+        "Sparda Blade",
+        "Dark Power"
+      ],
+      "popularity": 90,
+      "image": "assets/images/Sparda_Devil_Trigger_29_DMC4SE.webp",
+      "thumbnail": "assets/images/thumbs/characters/sparda.webp",
+      "description": "The demon who rebelled against his own kind to protect humanity.",
+      "lore": {
+        "full": "<p><strong>Sparda</strong>, known as the <em>Legendary Dark Knight</em>, was a formidable demon warrior who defied his own kind to protect humanity. Over two millennia ago, he served as the right-hand of Mundus, the demon emperor, participating in the invasion of the human world. However, upon witnessing the atrocities committed by his brethren, Sparda experienced a profound awakening to justice and chose to rebel against Mundus. In a monumental act of valor, he single-handedly defeated Mundus and his legions, sealing away the forces of darkness to safeguard the human realm.</p>\n\n<p>Recognizing the immense power he wielded, Sparda took a solemn vow to never allow his demonic abilities to threaten humanity again. To ensure this, he intentionally sealed away his own powers and the gateway to the Demon World, sacrificing much of his strength in the process. Despite his diminished state, he continued to live among humans, embracing a life of peace and solitude.</p>\n\n<p>During his time among humans, Sparda fell in love with a woman named Eva. Together, they had twin sons, Dante and Vergil, whom Sparda raised with love and care. Before his disappearance, he entrusted Eva with an amulet, a memento of his past, which she later passed on to their sons. This amulet would play a crucial role in the events that followed, serving as a key to unlocking the sealed gateway to the Demon World.</p>\n\n<p>Sparda's legacy endured through his sons. Dante, inheriting his father's rebellious spirit and sense of justice, became a demon hunter, protecting humanity from the very threats his father had once sealed away. Vergil, on the other hand, sought to reclaim the power his father had forsaken, leading to a complex and often adversarial relationship with Dante.</p>\n\n<p>Though Sparda's physical presence faded from the world, his influence remained ever-present. Statues in his likeness stood as monuments to his heroism, and his story was passed down through generations, inspiring countless individuals to stand against darkness. His sword, the Force Edge, and later the Devil Sword Sparda, became symbols of his enduring strength and commitment to justice.</p>\n\n<p>In the grand tapestry of the Devil May Cry saga, Sparda's actions were the catalyst for the events that followed. His rebellion against Mundus set the stage for the eternal struggle between light and darkness, a struggle that his sons would continue in their own ways. Sparda's legacy is not merely a tale of a powerful warrior, but a testament to the enduring power of choice, sacrifice, and the unwavering pursuit of justice.</p>",
+        "abilities": [
+          {
+            "name": "Sparda Sword Mastery",
+            "description": "Wields his legendary blade with unmatched precision.",
+            "icon": "fas fa-crossed-swords"
+          },
+          {
+            "name": "Dark Energy Manipulation",
+            "description": "Harnesses demonic power while retaining his will.",
+            "icon": "fas fa-magic"
+          },
+          {
+            "name": "Hellfire Surge",
+            "description": "Unleashes waves of infernal energy, consuming enemies in flames.",
+            "icon": "fas fa-fire"
+          },
+          {
+            "name": "Dimensional Rift",
+            "description": "Tears through space to strike enemies instantly across great distances.",
+            "icon": "fas fa-bolt"
+          }
+        ],
+        "stats": {
+          "power": 100,
+          "speed": 85,
+          "intelligence": 90,
+          "endurance": 95
+        },
+        "gallery": [
+          {
+            "image": "assets/images/spardadmc3.webp",
+            "caption": "Sparda in DMC3"
+          },
+          {
+            "image": "assets/images/spardabg.webp",
+            "caption": "Sparda family photo"
+          }
+        ],
+        "quotes": [
+          "Power is nothing without purpose.",
+          "I fought for humanity when no one else would.",
+          "Even in darkness, there is light."
+        ]
+      }
+    }
+  ],
+  "games": [
+    {
+      "id": "dmc1",
+      "title": "Devil May Cry",
+      "year": "2001",
+      "cover_image": "assets/images/Dmc1.webp",
+      "summary": "Dante's first adventure as he battles the demon emperor Mundus in Mallet Island.",
+      "platforms": [
+        "PS2",
+        "HD Collection",
+        "PC",
+        "Switch"
+      ],
+      "full_lore": {
+        "synopsis": "Devil May Cry follows the story of Dante, a demon hunter who operates a business called 'Devil May Cry'. He is hired by a woman named Trish to stop the demon emperor Mundus from returning to power. The game reveals Dante's backstory as the son of the legendary dark knight Sparda and a human woman named Eva. As Dante delves deeper into his mission, he uncovers secrets about his lineage and confronts powerful demons, including his own brother, Vergil. The narrative explores themes of identity, family, and the eternal battle between light and darkness.",
+        "plot": [
+          {
+            "chapter": "Prologue",
+            "content": "In the dimly lit interior of his Devil May Cry shop, Dante lounges casually, his feet propped up on the desk, a half-empty pizza box beside him. The tranquility is shattered when the door bursts open, and a mysterious woman strides in. Her striking resemblance to his late mother, Eva, catches Dante off guard. Without a word, she launches a sudden attack, her movements swift and precise. Dante, unfazed, effortlessly dodges her strikes, his demeanor cool and confident. He reveals that he hunts demons to avenge the deaths of his mother and brother, Vergil. The woman pauses, assessing him, and then admits that the assault was a test. She introduces herself as Trish and explains that the demon emperor Mundus, whom Dante holds responsible for his family's demise, is planning to return to the human world. Trish extends an invitation to Mallet Island, where Mundus has been amassing power in preparation for his ascension. Dante, intrigued and resolute, agrees to join her. Together, they embark on a journey to confront the looming threat. However, upon reaching the island, Trish's true intentions unfold, and she vanishes, leaving Dante to navigate the perilous path ahead alone."
+          },
+          {
+            "chapter": "Mallet Island",
+            "content": "Dante arrives at Mallet Island, a mysterious and foreboding location that serves as the epicenter of Mundus' plan to invade the human world. The island is dominated by an ancient castle, home to various demonic entities and treacherous landscapes. As Dante ventures deeper into the island, he encounters several formidable demons, including Phantom, Griffon, Nelo Angelo, and Nightmare, each guarding different sections of the castle. Along his journey, Dante discovers that Nelo Angelo is, in fact, his twin brother Vergil, who has succumbed to the allure of demonic power. This revelation adds a personal stake to Dante's mission, intensifying his resolve to thwart Mundus' resurrection. The island's eerie atmosphere and the constant threat of demonic attacks create a perilous environment, challenging Dante's strength and determination. Through cunning and combat prowess, Dante navigates the island's labyrinthine corridors and confronts its monstrous inhabitants, uncovering the dark secrets that lie within. Ultimately, Mallet Island becomes the battleground where Dante faces his destiny, setting the stage for the climactic battle against Mundus."
+          },
+          {
+            "chapter": "The Truth Revealed",
+            "content": "As Dante delves deeper into the mysteries of Mallet Island, he uncovers startling truths about those around him. The enigmatic Trish, who had initially appeared as a powerful ally, is revealed to have been created by the demon emperor Mundus. Crafted in the image of Dante's late mother, Eva, Trish was sent to lure him into a trap. Despite this revelation, Dante's compassion prevails. When Trish's life is threatened by Mundus, he chooses to save her, seeing beyond her origins and recognizing her humanity. This act of mercy leads to a profound change in Trish, who, moved by Dante's actions, decides to betray her creator and join forces with him. Together, they confront Mundus, culminating in a climactic battle that seals the demon emperor's fate and solidifies their partnership."
+          },
+          {
+            "chapter": "Final Confrontation",
+            "content": "In the climactic battle within the demon realm, Dante faces off against Mundus, the demon emperor responsible for his mother's death. Trish, having previously betrayed Dante, now stands by his side, determined to atone for her past actions. As the battle intensifies, Mundus unleashes a devastating energy beam aimed at Dante. In a selfless act, Trish intervenes, taking the full brunt of the attack and sacrificing herself to save him. Her death fuels Dante's rage, awakening the dormant power of his demonic heritage. With newfound strength, Dante confronts Mundus in a final showdown. Despite Mundus's formidable power, Dante emerges victorious, banishing the demon emperor back to the underworld. Believing Trish to be lost, Dante leaves behind his mother's keepsake and his sword, Sparda, as tokens of his gratitude and sorrow. However, as the island begins to collapse, Trish miraculously revives, her sacrifice having proven her humanity. She reunites with Dante, and together, they escape the crumbling island. In the aftermath, they rename the shop 'Devil Never Cry,' symbolizing their shared journey and the bonds forged through sacrifice and redemption."
+          }
+        ],
+        "characters": [
+          {
+            "name": "Dante",
+            "role": "Protagonist",
+            "description": "Son of Sparda, a carefree demon hunter with a rebellious attitude."
+          },
+          {
+            "name": "Trish",
+            "role": "Anti-Hero",
+            "description": "A demon created by Mundus who eventually sides with Dante."
+          },
+          {
+            "name": "Mundus",
+            "role": "Main Antagonist",
+            "description": "The demon emperor who killed Dante's mother and was sealed away by Sparda."
+          }
+        ],
+        "trivia": [
+          "Originally developed as Resident Evil 4 before becoming its own franchise",
+          "Introduced the iconic style system and combat mechanics",
+          "Dante's design was inspired by Cobra from Space Adventure Cobra"
+        ]
+      },
+      "thumbnail": "assets/images/thumbs/games/dmc1.webp"
+    },
+    {
+      "id": "dmc2",
+      "title": "Devil May Cry 2",
+      "year": "2003",
+      "cover_image": "assets/images/Dmc2.webp",
+      "summary": "Dante teams up with Lucia to stop Arius from awakening the demon Argosax.",
+      "platforms": [
+        "PS2",
+        "HD Collection",
+        "PC",
+        "Switch"
+      ],
+      "full_lore": {
+        "synopsis": "Set after the events of the first game, Devil May Cry 2 follows Dante as he becomes involved with a secret organization called Vie de Marli that protects the world from demons. He teams up with Lucia, a demon-human hybrid, to stop the businessman Arius from resurrecting the ancient demon Argosax. The story delves into themes of identity, sacrifice, and the eternal battle between good and evil, as Dante confronts powerful foes and uncovers hidden truths about his own lineage.",
+        "plot": [
+          {
+            "chapter": "Dumary Island",
+            "content": "Dante arrives on the island of Vie de Marli, a secluded land steeped in ancient traditions and guarded by the Protectors clan. Here, he encounters Lucia, a skilled demon hunter with a mysterious past. Lucia introduces Dante to her adoptive mother, Matier, the clan's elder and guardian. Matier, recognizing Dante as the son of Sparda, seeks his assistance in protecting the island from the demonic forces unleashed by Arius, the CEO of Uroboros Corporation. Arius aims to harness the power of Argosax, an ancient demon, by collecting the Arcanas—sacred relics hidden across the island. Matier implores Dante to help prevent Arius from completing the ritual and unleashing chaos upon the world. In exchange for his aid, she promises to share stories of his father's legacy, offering Dante insight into his own heritage. With a coin toss sealing his decision, Dante agrees to join the fight, setting the stage for a battle that intertwines his destiny with the island's fate."
+          },
+          {
+            "chapter": "Lucia's Origin",
+            "content": "As the battle against Arius intensifies, Lucia is captured and brought before him. In a moment of confrontation, Arius reveals the shocking truth: Lucia is not a human, but a 'mannequin demon' he created. He explains that she was deemed a 'defect' and discarded, only to be found and raised by Matier, who trained her as a protector of Vie de Marli. This revelation shatters Lucia's sense of identity, leading her to question her humanity. Despite the turmoil, she chooses to continue fighting alongside Dante, determined to stop Arius and prevent the resurrection of Argosax. Her unwavering resolve showcases her strength and commitment to protecting the world from demonic threats."
+          },
+          {
+            "chapter": "Argosax Awakens",
+            "content": "Arius, the ambitious CEO of Uroboros Corporation, succeeds in his dark endeavor to partially resurrect Argosax, the ancient demon lord. Utilizing the four sacred Arcana relics—Medaglia, Spada, Calice, and Bastone—Arius initiates a ritual during a solar eclipse to open a gateway to the Demon World. Although Dante intervenes by replacing the Medaglia with his own double-sided coin, the ritual's completion remains unimpeded. Arius absorbs a fragment of Argosax's immense power, transforming into a formidable demonic entity. This partial resurrection unleashes chaos upon the island of Vie de Marli, as demonic forces surge forth, threatening the balance between worlds. The once serene island becomes a battleground, with Dante and Lucia forced to confront the unleashed horrors and the corrupted Arius in a desperate bid to prevent the full return of Argosax."
+          },
+          {
+            "chapter": "Final Battle",
+            "content": "In the climactic battle within the demon realm, Dante faces off against Argosax, the ancient demon lord. With the assistance of Lucia, who has proven her loyalty and strength, they confront the formidable foe. Despite their combined efforts, Argosax's immense power proves overwhelming. In a final act of bravery, Lucia sacrifices herself to weaken Argosax, allowing Dante to deliver the decisive blow. With Argosax defeated, the balance between the human and demon worlds is restored. In the aftermath, Dante entrusts Lucia's legacy to the Protectors clan, leaving behind a token of their shared journey. As he departs, the island of Vie de Marli stands as a testament to their victory and the enduring fight against demonic forces."
+          }
+        ],
+        "characters": [
+          {
+            "name": "Dante",
+            "role": "Protagonist",
+            "description": "More reserved and mature than in the first game."
+          },
+          {
+            "name": "Lucia",
+            "role": "Playable Character",
+            "description": "A demon-human hybrid created by Arius who becomes Dante's ally."
+          },
+          {
+            "name": "Arius",
+            "role": "Main Antagonist",
+            "description": "A power-hungry businessman seeking demonic power."
+          }
+        ],
+        "trivia": [
+          "Considered the weakest entry in the series by many fans",
+          "Introduced the Bloody Palace mode",
+          "Dante has significantly less dialogue compared to other games"
+        ]
+      },
+      "thumbnail": "assets/images/thumbs/games/dmc2.webp"
+    },
+    {
+      "id": "dmc3",
+      "title": "Devil May Cry 3: Dante's Awakening",
+      "year": "2005",
+      "cover_image": "assets/images/Dmc3.webp",
+      "summary": "A prequel showing young Dante's confrontation with his brother Vergil.",
+      "platforms": [
+        "PS2",
+        "HD Collection",
+        "PC",
+        "Switch"
+      ],
+      "full_lore": {
+        "synopsis": "As Dante confronts his twin brother Vergil atop the demonic tower Temen-ni-gru, the air is thick with tension and the weight of their shared history. Vergil, embodying cold determination, reveals his intent to unlock the full potential of their demonic heritage by obtaining their father's power. He challenges Dante to join him in this pursuit, offering a path to transcend their human limitations. However, Dante, driven by a desire to protect humanity and his own sense of identity, refuses. The ensuing battle is fierce, showcasing their contrasting philosophies and combat prowess. Despite Dante's resilience, Vergil overpowers him, leaving him wounded and questioning his own purpose. This pivotal moment sets the stage for Dante's journey of self-discovery, as he grapples with his legacy and the choices that define his path.",
+        "plot": [
+          {
+            "chapter": "Devil May Cry Opens",
+            "content": "Dante receives a cryptic message from his estranged twin brother, Vergil, signaling the commencement of a cataclysmic event. In the midst of a bustling city, a colossal demonic tower, known as the Temen-ni-gru, erupts from the ground, casting a shadow over the skyline. This ominous structure serves as a gateway between the human and demon worlds, a remnant of their father's legacy. The sudden appearance of the tower unleashes chaos, with demonic forces spilling into the city, wreaking havoc. Amidst the turmoil, Dante's shop is destroyed, and he is thrust into a battle against these newfound threats. Determined to confront his brother and uncover the truth behind the tower's resurgence, Dante embarks on a perilous journey into the heart of the Temen-ni-gru, setting the stage for an epic confrontation that will test his strength, resolve, and understanding of his own identity."
+          },
+          {
+            "chapter": "Chance Meeting",
+            "content": "As Dante ventures deeper into the Temen-ni-gru, a sudden explosion shakes the ground beneath him. From the smoke emerges a mysterious woman, gracefully descending from the sky. With a swift motion, she lands before him, her eyes burning with determination. Without a word, she draws her weapon—a customized rocket launcher—and fires a barrage of missiles at a nearby demon. The force of the explosion sends Dante stumbling back, momentarily stunned by the sheer power and precision of her attack. She turns to him, her expression unreadable, and with a voice tinged with both resolve and sorrow, she introduces herself as Lady. She reveals that she is the daughter of Arkham, a man who has betrayed her and her mother in his quest for demonic power. Seeking vengeance, she has come to confront him and put an end to his machinations. Despite their initial tension, Dante recognizes the shared goal between them. Together, they form an uneasy alliance, setting aside differences to face the greater threat that looms over both the human and demon worlds."
+          },
+          {
+            "chapter": "Brother Against Brother",
+            "content": "Throughout their ascent of the Temen-ni-gru, Dante and Vergil engage in multiple battles, each reflecting their conflicting ideologies. Vergil, embodying stoic determination, seeks to obtain the power of their father, Sparda, by unlocking the gateway between the human and demon worlds. He believes that embracing their demonic heritage is the path to true strength. In contrast, Dante, driven by a desire to protect humanity and honor his mother's memory, opposes Vergil's quest for power. Their encounters are marked by intense combat and philosophical clashes, highlighting the deep rift between the brothers. Despite their shared lineage, their differing views on power and identity propel them toward inevitable confrontation."
+          },
+          {
+            "chapter": "Arkham's Betrayal",
+            "content": "As the battle between the brothers intensifies atop the Temen-ni-gru, the true mastermind behind the chaos reveals himself. Arkham, who had been manipulating both Dante and Vergil, unveils his true intentions. He had orchestrated the events leading up to the tower's resurrection, exploiting Vergil's desire for power and Dante's quest for answers. Arkham's ultimate goal was to claim the power of Sparda for himself, believing that by doing so, he could transcend humanity and become a demonic god. He had been using Vergil as a pawn, feeding into his ambitions while secretly plotting to betray him. This revelation shatters the brothers' perceptions, forcing them to confront not only each other but also the manipulative forces that have shaped their destinies."
+          },
+          {
+            "chapter": "Final Duel",
+            "content": "In the climactic battle within the demon realm, Dante faces off against his twin brother Vergil, who has embraced his demonic heritage and seeks the power of their father, Sparda. The two engage in a fierce combat, showcasing their contrasting philosophies and abilities. Despite Vergil's formidable strength, Dante ultimately prevails, defeating his brother in a poignant moment that underscores the deep bond and rivalry between them. As the battle concludes, Vergil, acknowledging his defeat, chooses to remain in the demon world, leaving Dante to return to the human realm. In the aftermath, Dante, reflecting on his journey and the challenges faced, decides to establish a business dedicated to combating demonic threats. He names his shop 'Devil May Cry,' a title inspired by a phrase spoken by Lady, symbolizing the complex nature of devils and the human capacity for compassion."
+          }
+        ],
+        "characters": [
+          {
+            "name": "Dante",
+            "role": "Protagonist",
+            "description": "Younger and more arrogant version of the demon hunter."
+          },
+          {
+            "name": "Vergil",
+            "role": "Antagonist",
+            "description": "Dante's twin brother who values power above all else."
+          },
+          {
+            "name": "Lady",
+            "role": "Anti-Hero",
+            "description": "A human demon hunter with a personal vendetta against Arkham."
+          }
+        ],
+        "trivia": [
+          "Considered one of the best action games of all time",
+          "Introduced the style system that became series staple",
+          "Vergil became a fan-favorite character"
+        ]
+      },
+      "thumbnail": "assets/images/thumbs/games/dmc3.webp"
+    },
+    {
+      "id": "dmc4",
+      "title": "Devil May Cry 4",
+      "year": "2008",
+      "cover_image": "assets/images/Dmc4.webp",
+      "summary": "Nero joins the fight against the Order of the Sword's demonic plans.",
+      "platforms": [
+        "PS3",
+        "Xbox 360",
+        "PC",
+        "Special Edition"
+      ],
+      "full_lore": {
+        "synopsis": "In the bustling city of Fortuna, Nero, a young and impetuous knight of the Order of the Sword, finds his life upended when Dante, the legendary demon hunter, crashes into the city's cathedral and assassinates the Order's revered leader, Sanctus. Amidst the ensuing chaos, demons flood the streets, threatening the lives of the city's inhabitants, including Nero's beloved Kyrie. Driven by a deep sense of duty and a desire to protect those he holds dear, Nero embarks on a perilous journey to confront Dante and uncover the truth behind the sudden onslaught. Along the way, he discovers that his right arm, known as the Devil Bringer, grants him formidable demonic powers, setting him on a path that intertwines his fate with the very forces he has sworn to combat.",
+        "plot": [
+          {
+            "chapter": "Sanctus' Assasination",
+            "content": "During a solemn ceremony held by the Order of the Sword in honor of Sparda, the revered founder of their faith, the atmosphere is abruptly shattered. As the congregation gathers to pay homage, a figure crashes through the stained-glass ceiling of the cathedral—Dante, the legendary demon hunter. With swift precision, he assassinates Sanctus, the high priest and leader of the Order, in front of the shocked and horrified onlookers. The act sends the crowd into a frenzy, with members of the Order scrambling to respond. Amidst the chaos, Nero, a young knight of the Order, steps forward to confront the mysterious assailant. Determined to protect the sanctity of their beliefs and uphold the honor of the Order, Nero engages Dante in a fierce battle. Despite his valiant efforts, Dante proves to be a formidable opponent, and the encounter ends with Dante escaping, leaving Nero to grapple with the aftermath of the assassination. This pivotal moment sets the stage for Nero's journey, as he embarks on a quest to uncover the truth behind Dante's actions and the dark secrets lurking within the Order."
+          },
+          {
+            "chapter": "Nero's Power",
+            "content": "As Nero delves deeper into the mysteries surrounding the Order of the Sword, he begins to experience unsettling changes. His right arm, known as the Devil Bringer, exhibits extraordinary strength and demonic abilities, including the power to absorb and manipulate demonic energy. Initially, Nero is unaware of the true nature of his arm, attributing its powers to mere coincidence. However, during a pivotal encounter with Agnus, a high-ranking member of the Order, Nero's Devil Bringer resonates with the shattered Yamato, a legendary katana forged by Sparda. This event triggers a profound transformation within Nero, unlocking his latent demonic potential. He gains the ability to enter a Devil Trigger state, enhancing his combat prowess and granting him access to powerful abilities. As Nero embraces his newfound powers, he uncovers the truth about his lineage—he is the grandson of Sparda, making him a direct descendant of the legendary dark knight. This revelation not only explains the origin of his demonic abilities but also solidifies his role in the ongoing battle between humans and demons. With his Devil Bringer fully awakened, Nero sets out to confront the forces threatening Fortuna and protect those he holds dear."
+          },
+          {
+            "chapter": "Order's True Plan",
+            "content": "In a dramatic revelation, Sanctus, the leader of the Order of the Sword, unveils his ultimate plan to harness the power of Sparda. He discloses that the colossal statue known as The Savior, constructed in Sparda's image, requires the blood of Sparda's descendant to come to life. To this end, Sanctus orchestrates a series of events to capture Nero, whose demonic heritage is tied to Sparda. By using Nero's blood and the ancient sword Yamato, Sanctus aims to awaken The Savior and use it to conquer the world. This revelation shocks Nero, who is confronted with the truth about his lineage and the dark ambitions of the Order. Despite his initial disbelief, Nero resolves to stop Sanctus and prevent the awakening of The Savior, setting the stage for a climactic battle that will determine the fate of Fortuna and the world."
+          },
+          {
+            "chapter": "Final Battle",
+            "content": "In a climactic showdown, Nero and Dante unite their formidable powers to confront Sanctus and the monstrous entity known as The Savior. Within the heart of the demonic colossus, Nero faces Sanctus in a battle that tests his resolve and strength. Utilizing his Devil Bringer arm and newfound abilities, Nero overcomes the corrupted leader of the Order of the Sword. Meanwhile, Dante engages The Savior in an aerial battle, ultimately delivering a decisive blow that shatters the demonic construct. With the defeat of their adversaries, peace begins to return to Fortuna. In a poignant moment, Dante entrusts Nero with the Yamato sword, acknowledging his growth and potential. As Dante departs, leaving the city to its defenders, Nero stands with Kyrie, ready to protect their home and embrace his destiny."
+          }
+        ],
+        "characters": [
+          {
+            "name": "Nero",
+            "role": "New Protagonist",
+            "description": "Young knight with a demonic arm who is later revealed to be Vergil's son."
+          },
+          {
+            "name": "Dante",
+            "role": "Playable Character",
+            "description": "Returns as the veteran demon hunter investigating the Order."
+          },
+          {
+            "name": "Kyrie",
+            "role": "Supporting Character",
+            "description": "Nero's childhood friend and love interest."
+          }
+        ],
+        "trivia": [
+          "First game to feature a protagonist other than Dante",
+          "Nero's Devil Bringer was inspired by grappling mechanics",
+          "Special Edition added Vergil, Lady, and Trish as playable characters"
+        ]
+      },
+      "thumbnail": "assets/images/thumbs/games/dmc4.webp"
+    },
+    {
+      "id": "dmc5",
+      "title": "Devil May Cry 5",
+      "year": "2019",
+      "cover_image": "assets/images/Dmc5.webp",
+      "summary": "The epic conclusion to the Sons of Sparda saga.",
+      "platforms": [
+        "PS4",
+        "Xbox One",
+        "PC"
+      ],
+      "full_lore": {
+        "synopsis": "Several years after the events of Devil May Cry 4, a new threat emerges in Red Grave City. A massive demonic tree known as the Qliphoth bursts from the ground, its roots extending throughout the city, draining the blood of its citizens to fuel its growth. Amidst the chaos, Nero, now operating his own Devil May Cry agency, encounters a mysterious figure named V. Together, they confront the demon king Urizen, who reveals himself to be the demon half of Vergil, Nero's father. As the battle intensifies, it becomes clear that Urizen's true goal is to consume the Qliphoth's fruit to gain ultimate power, threatening the very fabric of the human world. The revelation of Vergil's resurrection and his transformation into Urizen adds a personal stake to the conflict, forcing Nero and his allies to confront the consequences of the brothers' eternal rivalry.",
+        "plot": [
+          {
+            "chapter": "Red Grave Crisis",
+            "content": "Urizen, the newly crowned Demon King, initiates his reign by unleashing the Qliphoth tree upon Red Grave City. This colossal, demonic tree begins to drain the blood of the city's inhabitants, transforming them into lifeless husks. The Qliphoth's roots spread rapidly, embedding themselves deep within the city, while its branches extend into the sky, signaling the onset of a demonic invasion. As the tree grows, it releases a horde of demons, including the Empusa, who are dispatched to harvest human blood to nourish the tree's growth. The Qliphoth's roots also become obstacles for the protagonists, with clusters of blood clots forming along the roots, serving as nourishment for the tree and hindrances to those who oppose it. Amidst this chaos, Nero and V form an uneasy alliance, determined to stop Urizen and uncover the truth behind the demonic invasion."
+          },
+          {
+            "chapter": "V's Revelation",
+            "content": "In a pivotal moment during the battle against Urizen, V's true nature is unveiled. As the fight reaches its climax, V collapses, revealing his frail human form. He confesses to Dante and Trish that he is the human half of Vergil, separated through the use of the Yamato sword. Vergil, seeking to rid himself of his human weaknesses, used the Yamato to split his demon and human halves. The demon half manifested as Urizen, while the human half became V. This revelation shocks Dante and Trish, as they realize that V's quest to stop Urizen was, in essence, an effort to reunite with his own demonic side. Despite his human vulnerabilities, V's actions were driven by a desire to restore balance and confront the consequences of Vergil's choices."
+          },
+          {
+            "chapter": "Dante's Return",
+            "content": "In a pivotal moment during the battle against Urizen, Dante finds himself overwhelmed and on the brink of defeat. Reflecting on the legacy of his father, Sparda, and the power of the Yamato sword, Dante realizes that his own weapon, Rebellion, may hold the key to unlocking his latent demonic potential. In a desperate move, Dante stabs himself with the broken Rebellion, absorbing the essence of Sparda's sword and awakening his Sin Devil Trigger form. This transformation grants Dante an immense surge in power, amplifying his abilities and allowing him to confront Urizen with newfound strength. With his Sin Devil Trigger activated, Dante engages Urizen in a fierce battle, ultimately overcoming the demon king and delivering a decisive blow. This victory marks a significant turning point in the conflict, setting the stage for the subsequent events that unfold."
+          },
+          {
+            "chapter": "Brothers Reunited",
+            "content": "In a climactic turn of events, Vergil is fully restored when V, his human counterpart, merges with Urizen. The brothers, now reunited in their demonic forms, engage in a fierce battle atop the Qliphoth tree. Nero, having discovered his true lineage as Vergil's son, intervenes to prevent a fatal confrontation between his father and uncle. Despite his efforts, the brothers continue their clash. Nero, embracing his newfound powers, defeats Vergil, who acknowledges his son's strength. Vergil and Dante, recognizing the threat posed by the Qliphoth, decide to journey into the underworld to sever its roots and seal the portal, entrusting Nero with the protection of the human world."
+          }
+        ],
+        "characters": [
+          {
+            "name": "Nero",
+            "role": "Protagonist",
+            "description": "Now a seasoned demon hunter with mechanical Devil Breaker arms."
+          },
+          {
+            "name": "Dante",
+            "role": "Playable Character",
+            "description": "Faces his greatest challenge yet against Urizen."
+          },
+          {
+            "name": "V",
+            "role": "Mysterious Ally",
+            "description": "Vergil's human half who seeks to stop his demonic counterpart."
+          }
+        ],
+        "trivia": [
+          "First DMC game developed with RE Engine",
+          "Features three playable characters with distinct playstyles",
+          "Brought back classic characters like Lady and Trish",
+          "Revealed Nero's true parentage"
+        ]
+      },
+      "thumbnail": "assets/images/thumbs/games/dmc5.webp"
+    }
+  ]
+}
