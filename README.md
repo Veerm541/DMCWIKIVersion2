@@ -3,7 +3,7 @@
 A responsive multi-page fan wiki rebuilt with plain HTML, CSS, and JavaScript.
 
 ## Website check it out
-dmcwikiverion2.onrender.com
+https://dmcwikiversion2.onrender.com/
 
 ## Pages
 - `index.html` — full-screen looping video hero, featured character grid, game saga
