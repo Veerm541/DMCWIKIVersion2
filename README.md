@@ -2,16 +2,8 @@
 
 A responsive multi-page fan wiki rebuilt with plain HTML, CSS, and JavaScript.
 
-## Run
-Use a local web server because the site loads `assets/js/data.json` with `fetch()`.
-
-Recommended: open the folder in VS Code and use **Live Server**, or run:
-
-```bash
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000`.
+## Website check it out
+dmcwikiverion2.onrender.com
 
 ## Pages
 - `index.html` — full-screen looping video hero, featured character grid, game saga
@@ -40,9 +32,4 @@ Then open `http://localhost:8000`.
 - Mobile/tablet/desktop responsive layouts
 
 ## Notes
-The contact and newsletter forms are front-end demos. Connect them to your preferred backend or form service to send real submissions.
-
-This is an unofficial fan project. Devil May Cry and related properties belong to their respective rights holders.
-
-## CSS location
-The shared stylesheet is `style.css` in the project root. All seven HTML pages are connected directly to that file.
+got time to just renew the version of my first year WebTech web project lol
