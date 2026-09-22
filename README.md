@@ -1,6 +1,7 @@
 # Devil May Cry Wiki
 
 A fan-made Devil May Cry wiki website created as a school web development project.
+Got time to just renew the version of my first year WebTech web project lol
 
 
 ## Website check it out
@@ -13,15 +14,14 @@ The website focuses on the characters, lore, games, and style of the Devil May C
 ---
 
 ## Features
->>>>>>> 2d90804 (All changes are in CHANGELOG.md)
+
 
 ### Character Archive
 
 Browse major Devil May Cry characters including:
 
-<<<<<<< HEAD
+
 ## Notes
-got time to just renew the version of my first year WebTech web project lol
 =======
 - Dante
 - Vergil
@@ -209,4 +209,3 @@ Devil-May-Cry-Wiki/
 │       └── data.json
 │
 └── README.md
->>>>>>> 2d90804 (All changes are in CHANGELOG.md)
