@@ -2,7 +2,7 @@
 
 A fan-made Devil May Cry wiki website created as a school web development project.
 
-<<<<<<< HEAD
+
 ## Website check it out
 https://dmcwikiversion2.onrender.com/
 =======
