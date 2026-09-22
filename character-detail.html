@@ -96,14 +96,44 @@
         </div>
         <div>
           <h3 class="footer-title">Devil Hunter Dispatch</h3>
-          <p style="color:var(--muted);font-size:.82rem;margin-bottom:.7rem">Demo newsletter form with local front-end
-            validation.</p>
+         <p style="color:var(--muted);font-size:.82rem;margin-bottom:.7rem">
+  Join the Devil Hunter Dispatch for updates from the archive.
+</p>
           <div>
-            <form class="newsletter newsletter-form" novalidate><input class="field" type="email"
-                aria-label="Newsletter email" placeholder="hunter@example.com" required><button class="btn"
-                type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button></form>
-            <p class="newsletter-status" aria-live="polite"></p>
-          </div>
+  <form class="newsletter newsletter-form" novalidate>
+
+    <input
+      class="field"
+      type="email"
+      name="email"
+      aria-label="Newsletter email"
+      placeholder="hunter@example.com"
+      autocomplete="email"
+      required
+    >
+
+    <input
+      type="hidden"
+      name="form_type"
+      value="Devil Hunter Dispatch Newsletter"
+    >
+
+    <button
+      class="btn"
+      type="submit"
+      aria-label="Subscribe">
+
+      <i class="fa-solid fa-arrow-right"></i>
+
+    </button>
+
+  </form>
+
+  <p
+    class="newsletter-status"
+    aria-live="polite">
+  </p>
+</div>
         </div>
       </div>
       <div class="footer-bottom"><span>© <span data-current-year></span> Devil May Cry Wiki — fan

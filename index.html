@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,93 +8,217 @@
   <link rel="icon" href="assets/icons/favicon.ico" sizes="32x32">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/icons/favicon-180.png">
-  <meta name="description" content="Unofficial Devil May Cry fan wiki with character dossiers, game lore, galleries, and a 15-question trivia quiz.">
+  <meta name="description"
+    content="Unofficial Devil May Cry fan wiki with character dossiers, game lore, galleries, and a 15-question trivia quiz.">
   <title>Devil May Cry Wiki — Stylish Archive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@700;900&family=Inter:wght@400;500;600;700&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@700;900&family=Inter:wght@400;500;600;700&family=Teko:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-<header class="site-header" id="siteHeader">
-  <div class="nav-shell">
-    <a class="brand" href="index.html" aria-label="Devil May Cry Wiki home">
-      <span class="brand-mark">D</span>
-      <span class="brand-copy"><span class="brand-name">Devil May Cry</span><span class="brand-tag">Stylish Archive</span></span>
-    </a>
-    <nav class="site-nav" id="siteNav" aria-label="Primary navigation"><ul class="nav-list"><li><a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i>Home</a></li><li><a class="nav-link " href="characters.html"><i class="fa-solid fa-users"></i>Characters</a></li><li><a class="nav-link " href="lore.html"><i class="fa-solid fa-book-skull"></i>Game Lore</a></li><li><a class="nav-link " href="quiz.html"><i class="fa-solid fa-pizza-slice"></i>Pizza Time</a></li><li><a class="nav-link " href="contact.html"><i class="fa-solid fa-paper-plane"></i>Contact</a></li></ul></nav>
-    <div class="nav-actions">
-      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch color theme"><i class="fa-solid fa-sun"></i></button>
-      <button class="menu-btn" id="menuButton" type="button" aria-label="Open menu" aria-controls="siteNav" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <header class="site-header" id="siteHeader">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="Devil May Cry Wiki home">
+        <span class="brand-mark">D</span>
+        <span class="brand-copy"><span class="brand-name">Devil May Cry</span><span class="brand-tag">Stylish
+            Archive</span></span>
+      </a>
+      <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a class="nav-link " href="characters.html"><i class="fa-solid fa-users"></i>Characters</a></li>
+          <li><a class="nav-link " href="lore.html"><i class="fa-solid fa-book-skull"></i>Game Lore</a></li>
+          <li><a class="nav-link " href="quiz.html"><i class="fa-solid fa-pizza-slice"></i>Pizza Time</a></li>
+          <li><a class="nav-link " href="contact.html"><i class="fa-solid fa-paper-plane"></i>Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch color theme"><i
+            class="fa-solid fa-sun"></i></button>
+        <button class="menu-btn" id="menuButton" type="button" aria-label="Open menu" aria-controls="siteNav"
+          aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
     </div>
-  </div>
-</header>
-<section class="hero" id="home">
-  <div class="hero-media"><video autoplay muted loop playsinline preload="metadata" poster="assets/images/Dmc5.webp"><source src="assets/images/hero-loop.webm" type="video/webm"><source src="assets/images/hero-loop.mp4" type="video/mp4"></video></div>
-  <div class="container">
-    <div class="hero-copy reveal is-visible">
-      <span class="eyebrow"><i class="fa-solid fa-fire-flame-curved"></i> Unofficial Devil Hunter Archive</span>
-      <h1 class="hero-title">Stay <span class="slash">Stylish.</span><br>Know the <span class="display-outline">Legend.</span></h1>
-      <p class="hero-lede">Dive into character dossiers, game lore, galleries, and trivia from the Devil May Cry saga — rebuilt as a clean, responsive crimson archive.</p>
-      <div class="hero-actions"><a class="btn" href="#featured">Enter the archive <i class="fa-solid fa-arrow-down"></i></a><a class="btn secondary" href="characters.html">Meet the hunters <i class="fa-solid fa-users"></i></a></div>
-      <div class="hero-badges"><span class="micro-badge">10 character dossiers</span><span class="micro-badge">5 game archives</span><span class="micro-badge">15-question quiz</span></div>
-    </div>
-  </div>
-  <a class="scroll-cue" href="#featured" aria-label="Scroll to featured section">Scroll<span></span></a>
-</section>
-<main>
-  <section class="section" id="featured">
+  </header>
+  <section class="hero" id="home">
+    <div class="hero-media"><video autoplay muted loop playsinline preload="metadata" poster="assets/images/Dmc5.webp">
+        <source src="assets/images/hero-loop.webm" type="video/webm">
+        <source src="assets/images/hero-loop.mp4" type="video/mp4">
+      </video></div>
     <div class="container">
-      <div class="section-heading split reveal"><div><span class="section-kicker">Featured dossiers</span><h2>Devil Hunters <span class="accent-text">& Demons</span></h2><p>A clean grid of the hunters, allies, and demons that define the series.</p></div><a class="btn ghost small" href="characters.html">All characters <i class="fa-solid fa-arrow-right"></i></a></div>
-      <div class="archive-grid" id="featuredGrid"><div class="loading"><div><div class="spinner"></div><p style="margin-top:.8rem">Loading dossiers…</p></div></div></div>
+      <div class="hero-copy reveal is-visible">
+        <span class="eyebrow"><i class="fa-solid fa-fire-flame-curved"></i> Unofficial Devil Hunter Archive</span>
+        <h1 class="hero-title">Stay <span class="slash">Stylish.</span><br>Know the <span
+            class="display-outline">Legend.</span></h1>
+        <p class="hero-lede">Dive into character dossiers, game lore, galleries, and trivia from the Devil May Cry saga
+          — rebuilt as a clean, responsive crimson archive.</p>
+        <div class="hero-actions"><a class="btn" href="#featured">Enter the archive <i
+              class="fa-solid fa-arrow-down"></i></a><a class="btn secondary" href="characters.html">Meet the hunters <i
+              class="fa-solid fa-users"></i></a></div>
+        <div class="hero-badges"><span class="micro-badge">10 character dossiers</span><span class="micro-badge">5 game
+            archives</span><span class="micro-badge">15-question quiz</span></div>
+      </div>
     </div>
+    <a class="scroll-cue" href="#featured" aria-label="Scroll to featured section">Scroll<span></span></a>
   </section>
-  <section class="section compact">
-    <div class="container"><div class="style-panel reveal"><div class="style-meter"><div class="style-letter">SSS</div><div><div style="display:flex;justify-content:space-between;gap:1rem;margin-bottom:.55rem"><strong style="font-family:var(--font-display);font-size:1.3rem;text-transform:uppercase">Smokin' Sexy Style</strong><span style="color:var(--muted);font-size:.72rem">Wiki Style Meter</span></div><div class="meter-track"><div class="meter-fill" style="--meter:96%"></div></div></div><span class="tag">Stylish archive</span></div></div></div>
-  </section>
-  <section class="section" id="saga">
-    <div class="container"><div class="section-heading reveal"><span class="section-kicker">The saga</span><h2>Five Games. <span class="display-outline">One Bloodline.</span></h2><p>Open each record for its synopsis, plot points, key cast, and trivia.</p></div><div class="saga-grid reveal-stagger" id="sagaGrid"></div></div>
-  </section>
-  <section class="section compact">
-    <div class="container"><div class="stat-rail reveal"><div><strong>10</strong><span>Character files</span></div><div><strong>5</strong><span>Game records</span></div><div><strong>15</strong><span>Quiz questions</span></div><div><strong>SSS</strong><span>Style target</span></div></div></div>
-  </section>
-</main>
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-about">
-        <a class="brand" href="index.html"><span class="brand-mark">D</span><span class="brand-copy"><span class="brand-name">Devil May Cry</span><span class="brand-tag">Stylish Archive</span></span></a>
-        <p>An unofficial fan-made wiki and school web project built to celebrate the characters, stories, and stylish identity of Devil May Cry.</p>
-        <div class="social-row" aria-label="Official Devil May Cry social links">
-          <a class="social-link" href="https://x.com/DevilMayCry" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-          <a class="social-link" href="https://www.facebook.com/DMCPOCOFFICIAL/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a class="social-link" href="https://www.instagram.com/devilmaycry_5/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a class="social-link" href="https://www.youtube.com/devilmaycry" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+  <main>
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="section-heading split reveal">
+          <div><span class="section-kicker">Featured dossiers</span>
+            <h2>Devil Hunters <span class="accent-text">& Demons</span></h2>
+            <p>A clean grid of the hunters, allies, and demons that define the series.</p>
+          </div><a class="btn ghost small" href="characters.html">All characters <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="archive-grid" id="featuredGrid">
+          <div class="loading">
+            <div>
+              <div class="spinner"></div>
+              <p style="margin-top:.8rem">Loading dossiers…</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <h3 class="footer-title">Explore</h3>
-        <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="characters.html">Characters</a></li><li><a href="lore.html">Game Lore</a></li><li><a href="quiz.html">Pizza Time Quiz</a></li></ul>
+    </section>
+    <section class="section compact">
+      <div class="container">
+        <div class="style-panel reveal">
+          <div class="style-meter">
+            <div class="style-letter">SSS</div>
+            <div>
+              <div style="display:flex;justify-content:space-between;gap:1rem;margin-bottom:.55rem"><strong
+                  style="font-family:var(--font-display);font-size:1.3rem;text-transform:uppercase">Smokin' Sexy
+                  Style</strong><span style="color:var(--muted);font-size:.72rem">Wiki Style Meter</span></div>
+              <div class="meter-track">
+                <div class="meter-fill" style="--meter:96%"></div>
+              </div>
+            </div><span class="tag">Stylish archive</span>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3 class="footer-title">Info</h3>
-        <ul class="footer-links"><li><a href="contact.html">Contact</a></li><li><a href="contact.html#faq">FAQ</a></li><li><a href="https://www.devilmaycry.com/5se/us/" target="_blank" rel="noopener">Official DMC Site</a></li></ul>
+    </section>
+    <section class="section" id="saga">
+      <div class="container">
+        <div class="section-heading reveal"><span class="section-kicker">The saga</span>
+          <h2>Five Games. <span class="display-outline">One Bloodline.</span></h2>
+          <p>Open each record for its synopsis, plot points, key cast, and trivia.</p>
+        </div>
+        <div class="saga-grid reveal-stagger" id="sagaGrid"></div>
       </div>
-      <div>
-        <h3 class="footer-title">Devil Hunter Dispatch</h3>
-        <p style="color:var(--muted);font-size:.82rem;margin-bottom:.7rem">Demo newsletter form with local front-end validation.</p>
-        <div><form class="newsletter newsletter-form" novalidate><input class="field" type="email" aria-label="Newsletter email" placeholder="hunter@example.com" required><button class="btn" type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button></form><p class="newsletter-status" aria-live="polite"></p></div>
+    </section>
+    <section class="section compact">
+      <div class="container">
+        <div class="stat-rail reveal">
+          <div><strong>10</strong><span>Character files</span></div>
+          <div><strong>5</strong><span>Game records</span></div>
+          <div><strong>15</strong><span>Quiz questions</span></div>
+          <div><strong>SSS</strong><span>Style target</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html"><span class="brand-mark">D</span><span class="brand-copy"><span
+                class="brand-name">Devil May Cry</span><span class="brand-tag">Stylish Archive</span></span></a>
+          <p>An unofficial fan-made wiki and school web project built to celebrate the characters, stories, and stylish
+            identity of Devil May Cry.</p>
+          <div class="social-row" aria-label="Official Devil May Cry social links">
+            <a class="social-link" href="https://x.com/DevilMayCry" target="_blank" rel="noopener"
+              aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="social-link" href="https://www.facebook.com/DMCPOCOFFICIAL/" target="_blank" rel="noopener"
+              aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="social-link" href="https://www.instagram.com/devilmaycry_5/" target="_blank" rel="noopener"
+              aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="social-link" href="https://www.youtube.com/devilmaycry" target="_blank" rel="noopener"
+              aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-title">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="lore.html">Game Lore</a></li>
+            <li><a href="quiz.html">Pizza Time Quiz</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Info</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+            <li><a href="https://www.devilmaycry.com/5se/us/" target="_blank" rel="noopener">Official DMC Site</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Devil Hunter Dispatch</h3>
+          <p style="color:var(--muted);font-size:.82rem;margin-bottom:.7rem">
+  Join the Devil Hunter Dispatch for updates from the archive.
+</p>
+         <div>
+  <form class="newsletter newsletter-form" novalidate>
+
+    <input
+      class="field"
+      type="email"
+      name="email"
+      aria-label="Newsletter email"
+      placeholder="hunter@example.com"
+      autocomplete="email"
+      required
+    >
+
+    <input
+      type="hidden"
+      name="form_type"
+      value="Devil Hunter Dispatch Newsletter"
+    >
+
+    <button
+      class="btn"
+      type="submit"
+      aria-label="Subscribe">
+
+      <i class="fa-solid fa-arrow-right"></i>
+
+    </button>
+
+  </form>
+
+  <p
+    class="newsletter-status"
+    aria-live="polite">
+  </p>
+</div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-current-year></span> Devil May Cry Wiki — fan
+          project.</span><span>Devil May Cry and related properties belong to their respective rights holders.</span>
       </div>
     </div>
-    <div class="footer-bottom"><span>© <span data-current-year></span> Devil May Cry Wiki — fan project.</span><span>Devil May Cry and related properties belong to their respective rights holders.</span></div>
+  </footer>
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top"><i
+      class="fa-solid fa-arrow-up"></i></button>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image preview">
+    <div class="lightbox-inner"><button class="lightbox-close" id="lightboxClose" aria-label="Close image preview"><i
+          class="fa-solid fa-xmark"></i></button><img id="lightboxImage" alt="">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
   </div>
-</footer>
-<button class="back-top" id="backTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image preview"><div class="lightbox-inner"><button class="lightbox-close" id="lightboxClose" aria-label="Close image preview"><i class="fa-solid fa-xmark"></i></button><img id="lightboxImage" alt=""><p class="lightbox-caption" id="lightboxCaption"></p></div></div>
-<div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
-<script src="assets/js/site.js" defer></script>
-<script src="assets/js/home.js" defer></script>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/home.js" defer></script>
 </body>
+
 </html>

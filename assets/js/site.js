@@ -246,22 +246,201 @@ window.addEventListener('resize', () => {
   lightbox?.addEventListener('click', event => { if (event.target === lightbox) hideLightbox(); });
   document.addEventListener('keydown', event => { if (event.key === 'Escape') { hideLightbox(); closeMenu(); } });
 
-  // Footer newsletter is a front-end demo; validates and remembers the address locally.
-  $$('.newsletter-form').forEach(form => {
-    form.addEventListener('submit', event => {
-      event.preventDefault();
-      const email = $('input[type="email"]', form);
-      const status = $('.newsletter-status', form.parentElement);
-      const valid = email?.value.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
-      if (!valid) {
-        if (status) { status.textContent = 'Enter a valid email first.'; status.style.color = 'var(--danger)'; }
-        email?.focus();
-        return;
+ /* =========================================================
+   DEVIL HUNTER DISPATCH NEWSLETTER
+   ========================================================= */
+
+const NEWSLETTER_ENDPOINT =
+  'https://formspree.io/f/xeaognor';
+
+
+document
+  .querySelectorAll('.newsletter-form')
+  .forEach(form => {
+
+    const emailInput =
+      form.querySelector(
+        'input[type="email"]'
+      );
+
+    const button =
+      form.querySelector(
+        'button[type="submit"]'
+      );
+
+    const status =
+      form.parentElement.querySelector(
+        '.newsletter-status'
+      );
+
+
+    if (
+      !emailInput ||
+      !button ||
+      !status
+    ) {
+      return;
+    }
+
+
+    form.addEventListener(
+      'submit',
+      async event => {
+
+        event.preventDefault();
+
+
+        const email =
+          emailInput.value.trim();
+
+
+        /* -----------------------------------------
+           Validate email
+           ----------------------------------------- */
+
+        const emailPattern =
+          /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+        if (!emailPattern.test(email)) {
+
+          status.textContent =
+            'Enter a valid email address.';
+
+          status.style.color =
+            'var(--danger)';
+
+          emailInput.focus();
+
+          return;
+        }
+
+
+        /* -----------------------------------------
+           Loading state
+           ----------------------------------------- */
+
+        button.disabled = true;
+
+
+        const originalButtonHTML =
+          button.innerHTML;
+
+
+        button.innerHTML = `
+          <i class="fa-solid fa-spinner fa-spin"></i>
+        `;
+
+
+        status.textContent =
+          'Joining the dispatch...';
+
+
+        status.style.color =
+          'var(--muted)';
+
+
+        try {
+
+          const formData =
+            new FormData(form);
+
+
+          const response =
+            await fetch(
+              NEWSLETTER_ENDPOINT,
+              {
+                method: 'POST',
+
+                body: formData,
+
+                headers: {
+                  Accept:
+                    'application/json'
+                }
+              }
+            );
+
+
+          const result =
+            await response
+              .json()
+              .catch(() => null);
+
+
+          if (!response.ok) {
+
+            let message =
+              'Unable to subscribe. Please try again.';
+
+
+            if (
+              result &&
+              Array.isArray(result.errors) &&
+              result.errors.length
+            ) {
+
+              message =
+                result.errors
+                  .map(error =>
+                    error.message
+                  )
+                  .join(' ');
+
+            }
+
+
+            throw new Error(
+              message
+            );
+
+          }
+
+
+          /* -----------------------------------------
+             Success
+             ----------------------------------------- */
+
+          status.textContent =
+            'Welcome to the Devil Hunter Dispatch!';
+
+
+          status.style.color =
+            'var(--success)';
+
+
+          form.reset();
+
+
+        } catch (error) {
+
+          console.error(
+            'Newsletter error:',
+            error
+          );
+
+
+          status.textContent =
+            error.message ||
+            'Something went wrong. Please try again.';
+
+
+          status.style.color =
+            'var(--danger)';
+
+
+        } finally {
+
+          button.disabled = false;
+
+          button.innerHTML =
+            originalButtonHTML;
+
+        }
+
       }
-      localStorage.setItem('dmc-newsletter-email', email.value.trim());
-      if (status) { status.textContent = 'Subscribed — welcome to the Devil May Cry archive.'; status.style.color = 'var(--success)'; }
-      form.reset();
-    });
+    );
+
   });
 
   // Custom cursor on devices with a fine pointer only.
