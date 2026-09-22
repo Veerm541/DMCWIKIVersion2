@@ -1,48 +1,389 @@
 (async () => {
   const { $, escapeHTML, observeReveal, characterFocus } = window.DMC;
+  const SUPABASE_URL =
+    'https://frsgxoxalhzcdxlaprtt.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY =
+    'sb_publishable_CaEyqGYm4XAVLzDpEVjKJg_u1oXfSPR';
+  const TURNSTILE_SITE_KEY =
+    '0x4AAAAAAE_8vDaUIxqSom4N';
+
+  let turnstileWidgetId = null;
   const target = $('#characterDetail');
   const params = new URLSearchParams(location.search);
   const requested = params.get('name') || 'Dante';
   let characterName = requested;
 
-  const renderComments = () => {
+  const renderComments = async () => {
     const list = $('#commentsList');
+
     if (!list) return;
-    const all = JSON.parse(localStorage.getItem('dmc-comments') || '{}');
-    const comments = [...(all[characterName] || [])].sort((a,b) => new Date(b.date) - new Date(a.date));
-    list.innerHTML = comments.length ? comments.map(comment => `
-      <article class="comment-card">
-        <div class="comment-head">
-          <div class="comment-avatar">${escapeHTML((comment.name || '?').charAt(0).toUpperCase())}</div>
-          <div class="comment-meta"><strong>${escapeHTML(comment.name || 'Anonymous')}</strong><span>${new Date(comment.date).toLocaleString()}</span></div>
+
+    list.innerHTML = `
+    <div class="notice">
+      Loading fan comments...
+    </div>
+  `;
+
+    try {
+      const url = new URL(
+        `${SUPABASE_URL}/rest/v1/comments`
+      );
+
+      url.searchParams.set(
+        'select',
+        'id,display_name,comment_text,created_at'
+      );
+
+      url.searchParams.set(
+        'character_name',
+        `eq.${characterName}`
+      );
+
+      url.searchParams.set(
+        'status',
+        'eq.approved'
+      );
+
+      url.searchParams.set(
+        'order',
+        'created_at.desc'
+      );
+
+      const response = await fetch(url, {
+        headers: {
+          apikey: SUPABASE_PUBLISHABLE_KEY
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(
+          'Unable to load comments.'
+        );
+      }
+
+      const comments = await response.json();
+
+      if (!comments.length) {
+        list.innerHTML = `
+        <div class="notice">
+          No fan comments yet. You can be the first.
         </div>
-        <p>${escapeHTML(comment.text)}</p>
-      </article>`).join('') : '<div class="notice">No fan comments yet. You can be the first.</div>';
+      `;
+
+        return;
+      }
+
+      list.innerHTML = comments.map(comment => {
+
+        const name =
+          comment.display_name || 'Anonymous';
+
+        return `
+        <article class="comment-card">
+
+          <div class="comment-head">
+
+            <div class="comment-avatar">
+              ${escapeHTML(
+          name.charAt(0).toUpperCase()
+        )}
+            </div>
+
+            <div class="comment-meta">
+
+              <strong>
+                ${escapeHTML(name)}
+              </strong>
+
+              <span>
+                ${new Date(
+          comment.created_at
+        ).toLocaleString()}
+              </span>
+
+            </div>
+
+          </div>
+
+          <p>
+            ${escapeHTML(comment.comment_text)}
+          </p>
+
+        </article>
+      `;
+
+      }).join('');
+
+    } catch (error) {
+
+      console.error(error);
+
+      list.innerHTML = `
+      <div class="notice">
+        Could not load fan comments.
+      </div>
+    `;
+    }
   };
 
   const wireComments = () => {
     const form = $('#commentForm');
-    form?.addEventListener('submit', event => {
-      event.preventDefault();
-      const name = $('#commentName').value.trim();
-      const text = $('#commentText').value.trim();
-      const status = $('#commentStatus');
-      if (!text || text.length < 2) {
-        status.textContent = 'Write a short comment before posting.';
-        status.style.color = 'var(--danger)';
+    const status = $('#commentStatus');
+
+    if (!form) return;
+
+
+    /* ==============================================
+       RENDER CLOUDFLARE TURNSTILE
+       ============================================== */
+
+    const renderTurnstile = () => {
+
+      if (!window.turnstile) {
+        setTimeout(renderTurnstile, 200);
         return;
       }
-      const all = JSON.parse(localStorage.getItem('dmc-comments') || '{}');
-      if (!all[characterName]) all[characterName] = [];
-      all[characterName].push({ name, text, date: new Date().toISOString() });
-      localStorage.setItem('dmc-comments', JSON.stringify(all));
-      form.reset();
-      status.textContent = 'Comment posted on this device.';
-      status.style.color = 'var(--success)';
-      renderComments();
-    });
-  };
 
+      const widget =
+        document.querySelector(
+          '#turnstileWidget'
+        );
+
+      if (!widget) return;
+
+      turnstileWidgetId =
+        window.turnstile.render(
+          widget,
+          {
+            sitekey: TURNSTILE_SITE_KEY,
+            theme: 'auto'
+          }
+        );
+    };
+
+
+    renderTurnstile();
+
+
+    /* ==============================================
+       SUBMIT COMMENT
+       ============================================== */
+
+    form.addEventListener(
+      'submit',
+      async event => {
+
+        event.preventDefault();
+
+
+        const nameInput =
+          $('#commentName');
+
+        const textInput =
+          $('#commentText');
+
+
+        const displayName =
+          nameInput.value.trim() ||
+          'Anonymous';
+
+
+        const commentText =
+          textInput.value.trim();
+
+
+        /* ------------------------------------------
+           Basic validation
+           ------------------------------------------ */
+
+        if (commentText.length < 2) {
+
+          status.textContent =
+            'Write a short comment before posting.';
+
+          status.style.color =
+            'var(--danger)';
+
+          return;
+        }
+
+
+        if (commentText.length > 500) {
+
+          status.textContent =
+            'Comments can only contain 500 characters.';
+
+          status.style.color =
+            'var(--danger)';
+
+          return;
+        }
+
+
+        /* ------------------------------------------
+           Get Turnstile token
+           ------------------------------------------ */
+
+        const turnstileToken =
+          window.turnstile &&
+            turnstileWidgetId !== null
+
+            ? window.turnstile.getResponse(
+              turnstileWidgetId
+            )
+
+            : '';
+
+
+        if (!turnstileToken) {
+
+          status.textContent =
+            'Please complete the verification first.';
+
+          status.style.color =
+            'var(--danger)';
+
+          return;
+        }
+
+
+        /* ------------------------------------------
+           Disable button while submitting
+           ------------------------------------------ */
+
+        const submitButton =
+          form.querySelector(
+            'button[type="submit"]'
+          );
+
+
+        submitButton.disabled = true;
+
+        status.textContent =
+          'Submitting comment...';
+
+        status.style.color =
+          'var(--muted)';
+
+
+        try {
+
+          /* ==========================================
+             SEND TO SUPABASE EDGE FUNCTION
+             ========================================== */
+
+          const response = await fetch(
+            `${SUPABASE_URL}/functions/v1/submit-comment`,
+            {
+              method: 'POST',
+
+              headers: {
+                'Content-Type':
+                  'application/json',
+
+                apikey:
+                  SUPABASE_PUBLISHABLE_KEY
+              },
+
+              body: JSON.stringify({
+                character_name:
+                  characterName,
+
+                display_name:
+                  displayName,
+
+                comment_text:
+                  commentText,
+
+                turnstile_token:
+                  turnstileToken
+              })
+            }
+          );
+
+
+          const result =
+            await response.json();
+
+
+          if (!response.ok) {
+
+            throw new Error(
+              result.error ||
+              'Unable to submit comment.'
+            );
+
+          }
+
+
+          /* ==========================================
+             SUCCESS
+             ========================================== */
+
+          nameInput.value = '';
+          textInput.value = '';
+
+
+         status.textContent =
+          result.message ||
+          'Comment submitted successfully!';
+
+          status.style.color =
+            'var(--success)';
+
+          /*
+            Reset Turnstile so another
+            comment can be submitted.
+          */
+
+          if (
+            window.turnstile &&
+            turnstileWidgetId !== null
+          ) {
+
+            window.turnstile.reset(
+              turnstileWidgetId
+            );
+
+          }
+
+
+          await renderComments();
+
+        } catch (error) {
+
+          console.error(error);
+
+
+          status.textContent =
+            error.message ||
+            'Something went wrong.';
+
+
+          status.style.color =
+            'var(--danger)';
+
+
+          if (
+            window.turnstile &&
+            turnstileWidgetId !== null
+          ) {
+
+            window.turnstile.reset(
+              turnstileWidgetId
+            );
+
+          }
+
+        } finally {
+
+          submitButton.disabled = false;
+
+        }
+
+      }
+    );
+  };
   try {
     const response = await fetch('assets/js/data.json');
     if (!response.ok) throw new Error('Could not load character archive.');
@@ -87,7 +428,7 @@
                 <div class="weapon-row">${character.weapons.map(item => `<span class="weapon-pill">${escapeHTML(item)}</span>`).join('')}</div>
               </div>
               <div class="stats-grid reveal-stagger">
-                ${Object.entries(stats).map(([label,value]) => `<div class="stat-card"><div class="stat-top"><span>${escapeHTML(label)}</span><strong>${escapeHTML(value)}</strong></div><div class="stat-bar"><span style="--value:${Number(value) || 0}%"></span></div></div>`).join('')}
+                ${Object.entries(stats).map(([label, value]) => `<div class="stat-card"><div class="stat-top"><span>${escapeHTML(label)}</span><strong>${escapeHTML(value)}</strong></div><div class="stat-bar"><span style="--value:${Number(value) || 0}%"></span></div></div>`).join('')}
               </div>
               <article class="story-panel reveal">
                 <span class="section-kicker">Character record</span><h2>Lore</h2>
@@ -107,11 +448,29 @@
         </section>
         <section class="section compact">
           <div class="container">
-            <div class="section-heading reveal"><span class="section-kicker">Community</span><h2>Fan Comments</h2><p>Comments are stored locally in your browser for this project demo.</p></div>
+            <<div class="section-heading reveal">
+
+  <span class="section-kicker">
+    Community
+  </span>
+
+  <h2>
+    Fan Comments
+  </h2>
+
+  <p>
+    Share your thoughts with other Devil May Cry fans.
+  </p>
+
+</div>
             <div class="comments-shell">
               <form class="comment-form reveal" id="commentForm" novalidate>
                 <div class="form-group"><label for="commentName">Name (optional)</label><input class="field" id="commentName" maxlength="40" placeholder="Anonymous hunter"></div>
                 <div class="form-group" style="margin-top:.8rem"><label for="commentText">Comment</label><textarea class="field" id="commentText" maxlength="500" required placeholder="Share your thoughts..."></textarea></div>
+                <div
+  id="turnstileWidget"
+  style="margin-top:1rem">
+</div>
                 <button class="btn small" type="submit" style="margin-top:.8rem">Post comment <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
                 <p class="form-status" id="commentStatus" aria-live="polite"></p>
               </form>

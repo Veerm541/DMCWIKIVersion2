@@ -1,61 +1,376 @@
-(() => {
+(async () => {
   const { $, escapeHTML } = window.DMC;
-  const questions = [
-    { q: "What is the name of Dante's signature handgun?", c: ["Ivory", "Ebony", "Ebony & Ivory", "Sparda's Pistols"], a: "Ebony & Ivory" },
-    { q: "Which game first introduced Nero as a playable character?", c: ["Devil May Cry 1", "Devil May Cry 3", "Devil May Cry 4", "Devil May Cry 5"], a: "Devil May Cry 4" },
-    { q: "What is the name of Dante's demonic father?", c: ["Mundus", "Vergil", "Sparda", "Argosax"], a: "Sparda" },
-    { q: "What is the name of the demonic tree that Urizen seeks to cultivate in Devil May Cry 5?", c: ["Yggdrasil", "Qliphoth", "Tree of Souls", "Demon's Root"], a: "Qliphoth" },
-    { q: "What is the name of the demon emperor in DMC1?", c: ["Mundus", "Vergil", "Arkham", "Arius"], a: "Mundus" },
-    { q: "What is the name of Nero's demonic arm introduced in Devil May Cry 4?", c: ["Devil Bringer", "Devil Breaker", "Demon's Grasp", "Yamato"], a: "Devil Bringer" },
-    { q: "What was the original purpose of Trish's creation?", c: ["To serve as a vessel for Eva's soul", "To lure Dante into a trap", "To be a guardian of the Temen-ni-gru", "To act as a spy for the Order of the Sword"], a: "To lure Dante into a trap" },
-    { q: "Which character says 'Jackpot!' as their catchphrase?", c: ["Nero", "Vergil", "Dante", "Lady"], a: "Dante" },
-    { q: "What is the name of Dante's shop?", c: ["Devil Hunter", "Demon's Cry", "Devil May Cry", "Son of Sparda"], a: "Devil May Cry" },
-    { q: "Which game features the Temen-ni-gru tower?", c: ["DMC1", "DMC3", "DMC4", "DMC5"], a: "DMC3" },
-    { q: "What is Vergil's signature weapon?", c: ["Yamato", "Rebellion", "Force Edge", "Red Queen"], a: "Yamato" },
-    { q: "Which character is NOT playable in DMC5?", c: ["Dante", "Nero", "V", "Lady"], a: "Lady" },
-    { q: "What is the name of the demon king that Nero and V must confront in Devil May Cry 5?", c: ["Urizen", "Mundus", "Sparda", "Vergil"], a: "Urizen" },
-    { q: "Which game is chronologically first in the timeline? (Hint: When Dante was young)", c: ["DMC1", "DMC3", "DMC4", "DMC5"], a: "DMC3" },
-    { q: "What is the name of Nero's sword in DMC4 and DMC5?", c: ["Red Queen", "Blue Rose", "Yamato", "Rebellion"], a: "Red Queen" }
-  ];
-
   const container = $('#quizCard');
-  let list = [], index = 0, score = 0, locked = false;
-  const shuffle = arr => [...arr].sort(() => Math.random() - .5);
-  const rankFor = pct => pct >= 93 ? 'SSS' : pct >= 80 ? 'S' : pct >= 67 ? 'A' : pct >= 53 ? 'B' : pct >= 40 ? 'C' : 'D';
 
-  const start = () => { list = shuffle(questions); index = 0; score = 0; locked = false; render(); };
+  const QUESTIONS_PER_RUN = 15;
+
+  let questions = [];
+  let list = [];
+  let index = 0;
+  let score = 0;
+  let locked = false;
+
+  /* =========================================================
+     SHUFFLE FUNCTION
+     Randomizes questions and answer choices
+     ========================================================= */
+  const shuffle = (items) => {
+    const arr = [...items];
+
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+
+    return arr;
+  };
+
+
+  /* =========================================================
+     RESULT RANK
+     ========================================================= */
+  const rankFor = (pct) =>
+    pct >= 93 ? 'SSS' :
+    pct >= 80 ? 'S' :
+    pct >= 67 ? 'A' :
+    pct >= 53 ? 'B' :
+    pct >= 40 ? 'C' : 'D';
+
+
+  /* =========================================================
+     START / RESTART QUIZ
+     ========================================================= */
+  const start = () => {
+
+    /*
+      Shuffle all questions.
+
+      If you later add more than 30 questions to data.json,
+      this will randomly choose 30 questions from the bank.
+    */
+    list = shuffle(questions).slice(
+      0,
+      Math.min(QUESTIONS_PER_RUN, questions.length)
+    );
+
+    index = 0;
+    score = 0;
+    locked = false;
+
+    render();
+  };
+
+
+  /* =========================================================
+     RENDER QUIZ
+     ========================================================= */
   const render = () => {
+
+    /* Quiz finished */
     if (index >= list.length) {
-      const pct = Math.round((score / list.length) * 100);
-      container.innerHTML = `<div style="text-align:center"><span class="section-kicker">Mission complete</span><div class="result-rank">${rankFor(pct)}</div><h2 class="quiz-question">${score} / ${list.length} correct</h2><p style="color:var(--muted);margin:.8rem auto 1.4rem;max-width:520px">Your style score is ${pct}%. Replay to reshuffle every question and answer choice.</p><button class="btn" id="restartQuiz">Run it back <i class="fa-solid fa-rotate-right"></i></button></div>`;
-      $('#restartQuiz').addEventListener('click', start);
+
+      const pct = Math.round(
+        (score / list.length) * 100
+      );
+
+      container.innerHTML = `
+        <div style="text-align:center">
+
+          <span class="section-kicker">
+            Mission complete
+          </span>
+
+          <div class="result-rank">
+            ${rankFor(pct)}
+          </div>
+
+          <h2 class="quiz-question">
+            ${score} / ${list.length} correct
+          </h2>
+
+          <p
+            style="
+              color:var(--muted);
+              margin:.8rem auto 1.4rem;
+              max-width:520px;
+            "
+          >
+            Your style score is ${pct}%.
+            Replay to reshuffle the questions
+            and every answer choice.
+          </p>
+
+          <button
+            class="btn"
+            id="restartQuiz"
+          >
+            Run it back
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+
+        </div>
+      `;
+
+      $('#restartQuiz').addEventListener(
+        'click',
+        start
+      );
+
       return;
     }
-    locked = false;
-    const item = list[index];
-    const options = shuffle(item.c);
-    container.innerHTML = `
-      <div class="quiz-top"><span>Question ${index + 1} / ${list.length}</span><strong>Score ${score}</strong></div>
-      <div class="quiz-progress"><span style="--progress:${((index + 1) / list.length) * 100}%"></span></div>
-      <h2 class="quiz-question">${escapeHTML(item.q)}</h2>
-      <div class="quiz-choices">${options.map(option => `<button class="choice-btn" data-choice="${escapeHTML(option)}">${escapeHTML(option)}</button>`).join('')}</div>
-      <div class="quiz-actions"><button class="btn small" id="nextQuestion" disabled>Next question <i class="fa-solid fa-arrow-right"></i></button></div>`;
 
-    container.querySelectorAll('.choice-btn').forEach(button => button.addEventListener('click', () => {
-      if (locked) return;
-      locked = true;
-      const selected = button.dataset.choice;
-      if (selected === item.a) score++;
-      container.querySelectorAll('.choice-btn').forEach(btn => {
-        btn.disabled = true;
-        if (btn.dataset.choice === item.a) btn.classList.add('correct');
-        else if (btn === button) btn.classList.add('incorrect');
-      });
-      const next = $('#nextQuestion');
-      next.disabled = false;
-      next.focus();
-    }));
-    $('#nextQuestion').addEventListener('click', () => { index++; render(); });
+
+    locked = false;
+
+    const item = list[index];
+
+    /*
+      Shuffle answers every time
+      a question appears.
+    */
+    const options = shuffle(item.c);
+
+
+    container.innerHTML = `
+
+      <div class="quiz-top">
+
+        <span>
+          Question ${index + 1} / ${list.length}
+        </span>
+
+        <strong>
+          Score ${score}
+        </strong>
+
+      </div>
+
+
+      <div class="quiz-progress">
+
+        <span
+          style="
+            --progress:
+            ${((index + 1) / list.length) * 100}%
+          "
+        ></span>
+
+      </div>
+
+
+      <h2 class="quiz-question">
+        ${escapeHTML(item.q)}
+      </h2>
+
+
+      <div class="quiz-choices">
+
+        ${options.map(
+          (option, optionIndex) => `
+
+            <button
+              class="choice-btn"
+              data-option-index="${optionIndex}"
+            >
+              ${escapeHTML(option)}
+            </button>
+
+          `
+        ).join('')}
+
+      </div>
+
+
+      <div class="quiz-actions">
+
+        <button
+          class="btn small"
+          id="nextQuestion"
+          disabled
+        >
+          Next question
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+      </div>
+    `;
+
+
+    const buttons = [
+      ...container.querySelectorAll(
+        '.choice-btn'
+      )
+    ];
+
+
+    /* =====================================================
+       ANSWER CLICK
+       ===================================================== */
+    buttons.forEach(
+      (button, optionIndex) => {
+
+        button.addEventListener(
+          'click',
+          () => {
+
+            if (locked) return;
+
+            locked = true;
+
+
+            const selected =
+              options[optionIndex];
+
+
+            /* Add score if correct */
+            if (selected === item.a) {
+              score++;
+            }
+
+
+            /*
+              Show correct / incorrect answer
+            */
+            buttons.forEach(
+              (btn, btnIndex) => {
+
+                btn.disabled = true;
+
+                const value =
+                  options[btnIndex];
+
+
+                if (value === item.a) {
+
+                  btn.classList.add(
+                    'correct'
+                  );
+
+                }
+
+                else if (btn === button) {
+
+                  btn.classList.add(
+                    'incorrect'
+                  );
+
+                }
+
+              }
+            );
+
+
+            /* Enable next button */
+            const next =
+              $('#nextQuestion');
+
+            next.disabled = false;
+
+            next.focus();
+
+          }
+        );
+
+      }
+    );
+
+
+    /* =====================================================
+       NEXT QUESTION
+       ===================================================== */
+    $('#nextQuestion').addEventListener(
+      'click',
+      () => {
+
+        index++;
+
+        render();
+
+      }
+    );
+
   };
-  start();
+
+
+  /* =========================================================
+     LOAD QUIZ QUESTIONS FROM data.json
+     ========================================================= */
+  try {
+
+    container.innerHTML = `
+
+      <div
+        style="
+          text-align:center;
+          padding:2rem 1rem;
+        "
+      >
+
+        <span class="section-kicker">
+          Loading mission data
+        </span>
+
+        <p style="color:var(--muted)">
+          Preparing the question bank...
+        </p>
+
+      </div>
+    `;
+
+
+    const response =
+      await fetch(
+        'assets/js/data.json'
+      );
+
+
+    if (!response.ok) {
+
+      throw new Error(
+        'Unable to load quiz data.'
+      );
+
+    }
+
+
+    const data =
+      await response.json();
+
+
+    if (
+      !Array.isArray(data.quiz) ||
+      data.quiz.length === 0
+    ) {
+
+      throw new Error(
+        'No quiz questions were found in data.json.'
+      );
+
+    }
+
+
+    questions = data.quiz;
+
+    start();
+
+
+  } catch (error) {
+
+    container.innerHTML = `
+
+      <div class="notice">
+
+        ${escapeHTML(error.message)}
+
+        Run the website through
+        Live Server or your hosted site
+        so data.json can load correctly.
+
+      </div>
+
+    `;
+
+  }
+
 })();

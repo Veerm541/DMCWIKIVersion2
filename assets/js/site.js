@@ -43,21 +43,99 @@
     syncThemeIcon();
   });
 
-  const closeMenu = () => {
-    nav?.classList.remove('open');
-    menuButton?.setAttribute('aria-expanded', 'false');
-    document.body.classList.remove('menu-open');
-  };
+  /* =========================================================
+   MOBILE MENU
+   ========================================================= */
 
-  menuButton?.addEventListener('click', () => {
-    const open = !nav?.classList.contains('open');
-    nav?.classList.toggle('open', open);
-    menuButton.setAttribute('aria-expanded', String(open));
-    document.body.classList.toggle('menu-open', open);
-  });
+/* Create the dark background automatically.
+   This means you DON'T need to add it to every HTML page. */
+const navBackdrop = document.createElement('button');
 
-  $$('.nav-link').forEach(link => link.addEventListener('click', closeMenu));
-  window.addEventListener('resize', () => { if (innerWidth > 980) closeMenu(); });
+navBackdrop.type = 'button';
+navBackdrop.className = 'mobile-nav-backdrop';
+navBackdrop.setAttribute('aria-label', 'Close navigation menu');
+
+document.body.appendChild(navBackdrop);
+
+
+const setMenuState = (open) => {
+
+    if (!nav || !menuButton) return;
+
+    nav.classList.toggle('open', open);
+
+    menuButton.setAttribute(
+        'aria-expanded',
+        String(open)
+    );
+
+    menuButton.setAttribute(
+        'aria-label',
+        open ? 'Close menu' : 'Open menu'
+    );
+
+    document.body.classList.toggle(
+        'menu-open',
+        open
+    );
+};
+
+
+const closeMenu = () => {
+    setMenuState(false);
+};
+
+
+const openMenu = () => {
+    setMenuState(true);
+};
+
+
+menuButton?.addEventListener('click', () => {
+
+    const isOpen = nav?.classList.contains('open');
+
+    if (isOpen) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+
+});
+
+
+/* Clicking dark background closes menu */
+navBackdrop.addEventListener('click', closeMenu);
+
+
+/* Clicking a navigation link closes the drawer */
+$$('.nav-link').forEach(link => {
+
+    link.addEventListener('click', () => {
+        closeMenu();
+    });
+
+});
+
+
+/* ESC closes it */
+document.addEventListener('keydown', event => {
+
+    if (event.key === 'Escape') {
+        closeMenu();
+    }
+
+});
+
+
+/* If screen becomes desktop-sized, reset mobile state */
+window.addEventListener('resize', () => {
+
+    if (window.innerWidth > 980) {
+        closeMenu();
+    }
+
+});
 
   // Smooth in-page navigation with fixed-header offset.
   $$('a[href^="#"]').forEach(link => {
