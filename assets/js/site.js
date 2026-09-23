@@ -454,14 +454,18 @@ document
       const loop = () => {
         rx += (mx - rx) * .16;
         ry += (my - ry) * .16;
-        dot.style.transform = `translate(${mx - 2.5}px, ${my - 2.5}px)`;
+        dot.style.transform = `translate(${mx - 1}px, ${my - 1}px)`;
         ring.style.transform = `translate(${rx - 15}px, ${ry - 15}px)`;
         requestAnimationFrame(loop);
       };
       loop();
       document.addEventListener('pointerover', event => {
-        ring.classList.toggle('is-hover', Boolean(event.target.closest('a,button,input,select,textarea,[data-lightbox]')));
+        const hovering = Boolean(event.target.closest('a,button,input,select,textarea,[data-lightbox]'));
+        ring.classList.toggle('is-hover', hovering);
+        dot.classList.toggle('is-hover', hovering);
       });
+      addEventListener('pointerdown', () => ring.classList.add('is-down'));
+      addEventListener('pointerup', () => ring.classList.remove('is-down'));
     }
   }
 

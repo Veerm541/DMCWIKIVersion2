@@ -2167,7 +2167,10 @@ select.field option {
   color: var(--muted);
 }
 
-/* ---------- custom cursor ---------- */
+/* ---------- custom cursor ----------
+   Sharp blade-style pointer (crimson -> gold on hover) with a trailing
+   diamond "devil trigger" crest. Elements are positioned from JS
+   (site.js); the visuals live here so they are easy to tweak. */
 .cursor-dot,
 .cursor-ring {
   position: fixed;
@@ -2179,19 +2182,29 @@ select.field option {
 }
 
 .cursor-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--crimson-bright);
-  box-shadow: 0 0 14px var(--crimson);
+  width: 22px;
+  height: 28px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 28'%3E%3Cpath d='M1 1 L1 21.5 L6.2 16.8 L10 25.2 L13.4 23.7 L9.7 15.4 L16.8 15 Z' fill='%23ff2445' stroke='%2314060a' stroke-width='1.3' stroke-linejoin='miter'/%3E%3C/svg%3E") no-repeat 0 0 / 100% 100%;
+  filter: drop-shadow(0 0 5px rgba(215, 10, 35, .75));
+}
+
+.cursor-dot.is-hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 28'%3E%3Cpath d='M1 1 L1 21.5 L6.2 16.8 L10 25.2 L13.4 23.7 L9.7 15.4 L16.8 15 Z' fill='%23e7c56d' stroke='%2314060a' stroke-width='1.3' stroke-linejoin='miter'/%3E%3C/svg%3E");
+  filter: drop-shadow(0 0 6px rgba(231, 197, 109, .7));
 }
 
 .cursor-ring {
   width: 30px;
   height: 30px;
+}
+
+.cursor-ring::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
   border: 1px solid rgba(255, 80, 104, .7);
-  border-radius: 50%;
-  transition: width .2s ease, height .2s ease, border-color .2s ease, background .2s ease;
+  transform: rotate(45deg) scale(1);
+  transition: transform .25s var(--ease), border-color .2s ease, background .2s ease;
 }
 
 body.cursor-ready .cursor-dot,
@@ -2208,11 +2221,15 @@ body.cursor-ready textarea {
   cursor: none;
 }
 
-.cursor-ring.is-hover {
-  width: 48px;
-  height: 48px;
+.cursor-ring.is-hover::before {
+  transform: rotate(135deg) scale(1.55);
   background: rgba(215, 10, 35, .1);
   border-color: var(--crimson-bright);
+}
+
+.cursor-ring.is-down::before {
+  transform: rotate(135deg) scale(.75);
+  background: rgba(215, 10, 35, .25);
 }
 
 /* ---------- reveal ---------- */
@@ -2642,10 +2659,9 @@ body.cursor-ready textarea {
       transform var(--hover-medium) var(--ease-hover);
   }
 
-  .cursor-ring {
+  .cursor-ring::before {
     transition:
-      width var(--hover-fast) var(--ease-hover),
-      height var(--hover-fast) var(--ease-hover),
+      transform var(--hover-fast) var(--ease-hover),
       border-color var(--hover-fast) ease,
       background var(--hover-fast) ease;
   }
